@@ -2,6 +2,7 @@ package com.example.tcc_raify
 
 import android.os.Bundle
 import android.provider.ContactsContract
+import android.util.Patterns
 import android.widget.EditText
 import android.widget.LinearLayout
 import android.widget.Toast
@@ -69,5 +70,47 @@ class TelaCadastro : AppCompatActivity() {
             return false
         }
 
+        if (emailCadastro.isEmpty()) {
+            edtEmailCadastro.error = "Informe o e-mail"
+            edtEmailCadastro.requestFocus()
+            return false
+        }
+
+        if(!Patterns.EMAIL_ADDRESS.matcher(emailCadastro).matches()) {
+            edtEmailCadastro.error = "E-mail inválido"
+            edtEmailCadastro.requestFocus()
+            return false
+        }
+
+        if(telefoneCadastro.isEmpty()) {
+            edtTelefoneCadastro.error = "Informe o telefone"
+            edtTelefoneCadastro.requestFocus()
+            return false
+        }
+
+        if(senhaCadastro.isEmpty()) {
+            edtSenhaCadastro.error = "Informe a senha"
+            edtSenhaCadastro.requestFocus()
+            return false
+        }
+
+        if (senhaCadastro.length < 6) {
+            edtSenhaCadastro.error = "A senha deve ter no mínimo 6 caracteres"
+            edtSenhaCadastro.requestFocus()
+            return false
+        }
+
+        if (confirmarSenhaCadastro.isEmpty()) {
+            edtConfirmarSenhaCadastro.error = "Confirme sua senha"
+            edtConfirmarSenhaCadastro.requestFocus()
+            return false
+        }
+
+        if (senhaCadastro != confirmarSenhaCadastro) {
+            edtConfirmarSenhaCadastro.error = "As senhas não coincidem"
+            edtConfirmarSenhaCadastro.requestFocus()
+            return false
+        }
+        return true
     }
 }
