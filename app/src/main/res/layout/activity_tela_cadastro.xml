@@ -26,7 +26,7 @@
 
         <!-- BOTÃO DE VOLTAR -->
         <LinearLayout
-            android:id="@+id/btnVoltar"
+            android:id="@+id/btnVoltarCadastro"
             android:layout_width="120dp"
             android:layout_height="46dp"
             android:orientation="horizontal"
@@ -119,7 +119,7 @@
                 android:textSize="20sp"
                 android:textStyle="bold"/>
             <EditText
-                android:id="@+id/edtNomecompleto"
+                android:id="@+id/edtNomeCompletoCadastro"
                 android:layout_width="288dp"
                 android:layout_height="48dp"
                 android:layout_marginTop="3dp"
@@ -141,7 +141,7 @@
                 android:textColor="@color/black"
                 android:textStyle="bold"/>
             <EditText
-                android:id="@+id/edtEmail"
+                android:id="@+id/edtEmailCadastro"
                 android:layout_width="288dp"
                 android:layout_height="48dp"
                 android:layout_marginTop="3dp"
@@ -164,7 +164,7 @@
                 android:textSize="20dp"
                 android:textStyle="bold"/>
             <EditText
-                android:id="@+id/edtTelefone"
+                android:id="@+id/edtTelefoneCadastro"
                 android:layout_width="288dp"
                 android:layout_height="48dp"
                 android:layout_marginTop="3dp"
@@ -186,7 +186,7 @@
                 android:textStyle="bold"
                 android:textSize="20sp"/>
             <EditText
-                android:id="@+id/edtSenha"
+                android:id="@+id/edtSenhaCadastro"
                 android:layout_width="288dp"
                 android:layout_height="48dp"
                 android:layout_marginTop="3dp"
@@ -208,6 +208,7 @@
                 android:textStyle="bold"
                 android:textSize="20sp"/>
             <EditText
+                android:id="@+id/edtConfirmarSenhaCadastro"
                 android:layout_width="288dp"
                 android:layout_height="48dp"
                 android:layout_marginTop="3dp"
