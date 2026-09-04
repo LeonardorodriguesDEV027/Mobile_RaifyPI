@@ -13,7 +13,7 @@
         android:id="@+id/btnVoltar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="◀ Voltar"
+        android:text="Voltar"
         android:textColor="#22A06B"
         android:textSize="15sp"
         android:background="@android:color/transparent"
