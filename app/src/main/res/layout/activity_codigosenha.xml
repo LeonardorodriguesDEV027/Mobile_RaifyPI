@@ -52,12 +52,12 @@
         <!-- ESPAÇO -->
         <Space
             android:layout_width="match_parent"
-            android:layout_height="100dp"/>
+            android:layout_height="60dp"/>
         <!-- CARD -->
         <LinearLayout
             android:id="@+id/cardCodigo"
             android:layout_width="match_parent"
-            android:layout_height="500dp"
+            android:layout_height="520dp"
             android:background="@drawable/bg_card"
             android:elevation="2dp"
             android:layout_gravity="center_vertical"
@@ -106,72 +106,112 @@
                 android:textSize="18sp"
                 android:textColor="@color/black"/>
 
-            <!-- NOVA SENHA -->
+            <!-- INSTRUÇÃO -->
             <TextView
-                android:id="@+id/texNSR"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:gravity="center"
+                android:layout_gravity="center_horizontal"
+                android:text="Insira o código de 6 dígitos\nenviado para o seu email"
+                android:textSize="16sp"
+                android:textColor="@color/black"
+                android:textStyle="bold"/>
+
+            <!-- "Código" -->
+            <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="22dp"
                 android:layout_marginStart="20dp"
-                android:text="Nova Senha"
+                android:text="Código"
                 android:textColor="@color/black"
                 android:textSize="20sp"
-                android:textStyle="bold"
-                android:labelFor="@+id/edtNSR"/>
+                android:textStyle="bold"/>
 
-            <!-- NSR = Nova Senha Redefinir -->
-            <EditText
-                android:id="@+id/edtNSR"
-                android:layout_width="288dp"
-                android:layout_height="54dp"
-                android:layout_marginTop="3dp"
-                android:layout_marginLeft="20dp"
-                android:hint="••••••••"
-                android:paddingStart="16dp"
-                android:paddingEnd="16dp"
-                android:inputType="textPassword"
-                android:background="@drawable/bg_input"/>
+            <!-- Linha com os 6 campos de código -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal"
+                android:weightSum="6">
 
-            <!-- CONFIRMAR SENHA -->
-            <TextView
-                android:id="@+id/txtCSR"
+                <!-- Campo 1 -->
+                <EditText
+                    android:id="@+id/digito1"
+                    style="@style/CampoCodigo"
+                    android:layout_marginStart="16dp"/>
+
+                <!-- Campo 2 -->
+                <EditText
+                    android:id="@+id/digito2"
+                    style="@style/CampoCodigo"/>
+
+                <!-- Campo 2 -->
+                <EditText
+                    android:id="@+id/digito3"
+                    style="@style/CampoCodigo"/>
+
+                <!-- Campo 2 -->
+                <EditText
+                    android:id="@+id/digito4"
+                    style="@style/CampoCodigo"/>
+
+                <!-- Campo 2 -->
+                <EditText
+                    android:id="@+id/digito5"
+                    style="@style/CampoCodigo"/>
+
+                <!-- Campo 2 -->
+                <EditText
+                    android:id="@+id/digito6"
+                    style="@style/CampoCodigo"
+                    android:layout_marginEnd="16dp"/>
+            </LinearLayout>
+
+            <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="22dp"
-                android:layout_marginStart="20dp"
-                android:text="Confirmar Senha"
-                android:textColor="@color/black"
-                android:textSize="20sp"
-                android:textStyle="bold"
-                android:labelFor="@+id/edtCSR"/>
+                android:layout_marginTop="16dp"
+                android:orientation="horizontal"
+                android:layout_gravity="center_horizontal">
 
-            <!-- CSR = Confirmar Senha Redefinir -->
-            <EditText
-                android:id="@+id/edtCSR"
-                android:layout_width="288dp"
-                android:layout_height="54dp"
-                android:layout_marginTop="3dp"
-                android:layout_marginLeft="20dp"
-                android:hint="••••••••"
-                android:paddingStart="16dp"
-                android:paddingEnd="16dp"
-                android:inputType="textPassword"
-                android:background="@drawable/bg_input"/>
+                <TextView
+                    android:id="@+id/naoAC"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Não achou o código?"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    android:labelFor="@id/txtReenviar"/>
 
-
-
+                <TextView
+                    android:id="@+id/txtReenviar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Reenviar o código"
+                    android:textSize="16sp"
+                    android:textColor="@color/verde_principal"
+                    android:textStyle="bold"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:background="?attr/selectableItemBackground"
+                    android:padding="4dp"/>
+            </LinearLayout>
 
             <!-- BOTÃO -->
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/btnConfirmar"
                 android:layout_width="match_parent"
                 android:layout_height="54dp"
-                android:layout_marginTop="16dp"
+                android:layout_marginTop="20dp"
                 android:layout_marginStart="12dp"
                 android:layout_marginEnd="12dp"
                 android:layout_gravity="center_horizontal"
                 android:gravity="center"
-                android:text="Redfinir senha"
+                android:text="Confirmar código"
                 android:textColor="@color/white"
                 android:textSize="22sp"
                 android:textStyle="bold"

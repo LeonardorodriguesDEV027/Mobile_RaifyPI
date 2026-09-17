@@ -147,7 +147,7 @@
                 android:layout_height="54dp"
                 android:layout_marginTop="3dp"
                 android:layout_marginLeft="20dp"
-                android:hint="••••••••••••"
+                android:hint="••••••••"
                 android:paddingStart="16dp"
                 android:paddingEnd="16dp"
                 android:inputType="textPassword"
