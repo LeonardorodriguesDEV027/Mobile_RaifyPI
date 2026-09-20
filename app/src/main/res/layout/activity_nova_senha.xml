@@ -25,9 +25,37 @@
         app:layout_constraintEnd_toEndOf="parent">
 
         <!-- BOTÃO DE VOLTAR -->
+        <LinearLayout
+            android:id="@+id/btnVoltar"
+            android:layout_width="wrap_content"
+            android:layout_height="46dp"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:paddingStart="12dp"
+            android:paddingEnd="16dp"
+            android:background="@drawable/bg_voltar">
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/setaesquerda"
+                android:contentDescription="@null"
+                app:tint="@color/verde_principal" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="2dp"
+                android:text="Voltar para o envio do código"
+                android:textColor="#11AE6A"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+        </LinearLayout>
 
         <!-- ESPAÇO -->
-
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="120dp" />
 
         <!-- CARD -->
         <LinearLayout

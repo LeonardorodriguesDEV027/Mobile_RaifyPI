@@ -86,8 +86,8 @@ class MainActivity : AppCompatActivity() {
             edtSenha.requestFocus()
             return false
         }
-        if (senha.length < 6) {
-            edtSenha.error = "A senha deve ter no mínimo 6 caracteres"
+        if (senha.length < 8) {
+            edtSenha.error = "A senha deve ter no mínimo 8 caracteres"
             edtSenha.requestFocus()
             return false
         }
