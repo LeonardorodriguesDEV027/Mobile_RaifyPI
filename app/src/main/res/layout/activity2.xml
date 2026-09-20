@@ -191,9 +191,10 @@
                         <ImageView
                             android:layout_width="32dp"
                             android:layout_height="32dp"
-                            android:background="@drawable/"
-                            android:padding="4dp"
-                            android:src="@drawable/" />
+                            android:background="@drawable/bg_icon_receita"
+                            android:padding="6dp"
+                            android:src="@drawable/ic_seta_cima"
+                            app:tint="#2E7D32"/>
 
                         <LinearLayout
                             android:layout_width="0dp"

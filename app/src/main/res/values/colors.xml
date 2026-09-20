@@ -11,4 +11,5 @@
     <color name="vermelho">#FF2C2C</color>
     <color name="amarelo">#E2B72A</color>
     <color name="cinza">#c9c7c7</color>
+    <color name="cinza_claro">#B3FFFFFF</color>
 </resources>
