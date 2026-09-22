@@ -1,5 +1,6 @@
 package com.example.tcc_raify
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import android.widget.EditText
@@ -49,7 +50,56 @@ class activity_mudarsenha : AppCompatActivity() {
 
     // Validação local antes de chamar o backend
     private fun tentarRedefinirSenha() {
+        val novaSenha = edtNovaSenha.text.toString()
+        val confirmarSenha = edtConfirmarSenha.toString()
 
+        if (novaSenha.length < TAMANHO_MINIMO_SENHA) {
+            Toast.makeText(
+                this, "A senha precisa ter mínimo $TAMANHO_MINIMO_SENHA caracteres",
+                Toast.LENGTH_SHORT
+            ).show()
+            return
+        }
+        if (novaSenha != confirmarSenha) {
+            Toast.makeText(this, "As senhas não coincidem", Toast.LENGTH_SHORT).show()
+            return
+        }
+        redefinirSenhaNoServidor(novaSenha)
+    }
+    // Troca a senha via Cloud Function (Admin SDK), pois o usuário
+    // não está logado nesse momento (fluxo de "esqueci a senha").
+    // O Firebase Auth não permite updatePassword() sem login recente,
+    // então a validação final do código + a troca de senha precisam
+    // acontecer no servidor.
+    //
+
+    private fun redefinirSenhaNoServidor(novaSenha: String) {
+        btnRedefinir.isEnabled = false
+
+        val dados = hashMapOf(
+            "email" to email,
+            "codigo" to codigo,
+            "novaSenha" to novaSenha
+        )
+
+        functions.getHttpsCallable("redefinirSenha")
+            .call(dados)
+            .addOnSuccessListener {
+                Toast.makeText(this, "Senha redefinida com sucesso!", Toast.LENGTH_SHORT).show()
+                irParaLogin()
+            }
+            .addOnFailureListener { erro ->
+                btnRedefinir.isEnabled = true
+                Toast.makeText(this, erro.menssage ?: "Erro ao redefinir  a senha. Tente novamente.",
+                    Toast.LENGTH_SHORT).show()
+            }
+    }
+    private fun irParaLogin() {
+        val intent = Intent(this, MainActivity::class.java).apply {
+            flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
+        }
+        startActivity(intent)
+        finish()
     }
 
 }
