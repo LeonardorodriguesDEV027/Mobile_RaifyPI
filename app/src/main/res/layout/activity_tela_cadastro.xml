@@ -214,6 +214,7 @@
                 android:layout_marginTop="3dp"
                 android:layout_marginLeft="20dp"
                 android:hint="Digite a senha novamente"
+                android:textSize="16sp"
                 android:paddingStart="16dp"
                 android:paddingEnd="16dp"
                 android:inputType="textPassword"

@@ -38,7 +38,7 @@
                 android:layout_height="30dp"
                 android:src="@drawable/setaesquerda"
                 android:contentDescription="@null"
-                app:tint="#11AE6A" />
+                app:tint="@color/verde_principal"/>
 
             <TextView
                 android:layout_width="wrap_content"

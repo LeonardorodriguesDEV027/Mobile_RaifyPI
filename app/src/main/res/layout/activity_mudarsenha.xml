@@ -163,7 +163,7 @@
 
             <!-- BOTÃO -->
             <com.google.android.material.button.MaterialButton
-                android:id="@+id/btnConfirmar"
+                android:id="@+id/btnRedefinir"
                 android:layout_width="match_parent"
                 android:layout_height="54dp"
                 android:layout_marginTop="16dp"
@@ -171,7 +171,7 @@
                 android:layout_marginEnd="12dp"
                 android:layout_gravity="center_horizontal"
                 android:gravity="center"
-                android:text="Redfinir senha"
+                android:text="Redefinir senha"
                 android:textColor="@color/white"
                 android:textSize="22sp"
                 android:textStyle="bold"
