@@ -1,7 +1,0 @@
-<resources>
-    <string name="app_name">diagnostico_inicial</string>
-    Texto fora do input
-    <string name="area">Área/Talhão</string>
-    texto dentro do input
-    <string name="hint1">Ex: T-01 - Tomate</string>
-</resources>
