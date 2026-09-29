@@ -2,22 +2,17 @@ package com.example.tcc_raify
 
 import android.content.Context
 import android.content.Intent
-import android.content.pm.Checksum
 import android.os.Bundle
-import android.provider.ContactsContract
 import android.util.Patterns
 import android.widget.CheckBox
 import android.widget.EditText
 import android.widget.LinearLayout
 import android.widget.TextView
-import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
 import com.google.android.material.button.MaterialButton
 
 
-class MainActivity : AppCompatActivity() {
+class activity_loginagricultor : AppCompatActivity() {
     private lateinit var edtEmail: EditText
     private lateinit var edtSenha: EditText
     private lateinit var checkLembrar: CheckBox
@@ -29,7 +24,7 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        setContentView(R.layout.activity_loginagricultor)
 
         /// Referências dos elementos da tela
         edtEmail = findViewById(R.id.edtEmail)

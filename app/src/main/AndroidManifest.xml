@@ -32,7 +32,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".MainActivity"
+            android:name=".activity_loginagricultor"
             android:exported="false" />
         <activity
             android:name=".MainActivity2"
@@ -48,6 +48,10 @@
             android:windowSoftInputMode="adjustResize" />
         <activity
             android:name=".activity_telaescolha"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".activity_telainicial"
             android:exported="false"
             android:windowSoftInputMode="adjustResize" />
     </application>

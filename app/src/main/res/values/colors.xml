@@ -12,4 +12,7 @@
     <color name="amarelo">#E2B72A</color>
     <color name="cinza">#c9c7c7</color>
     <color name="cinza_claro">#B3FFFFFF</color>
+    <color name="gradiente_1">#5A0A140C</color> <!-- Opacidade em %5 -->
+    <color name="gradiente_2">#260A140C</color> <!-- Opacidade em %5 -->
+    <color name="gradiente_3">#F5080E0A</color> <!-- Opacidade em %5 -->
 </resources>

@@ -5,7 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"
+    tools:context=".activity_loginagricultor"
     android:background="#FFFFFF">
 
     <!-- FUNDO -->
@@ -36,7 +36,7 @@
             <ImageView
                 android:layout_width="30dp"
                 android:layout_height="30dp"
-                android:src="@drawable/setaesquerda"
+                android:src="@drawable/ic_setaesquerda"
                 android:contentDescription="@null"
                 app:tint="@color/verde_principal"/>
 

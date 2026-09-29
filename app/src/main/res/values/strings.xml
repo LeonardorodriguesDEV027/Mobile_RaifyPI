@@ -2,5 +2,6 @@
     <string name="app_name">TCC_Raify</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="welcome_bg_content_description">Foto de agricultor em plantação orgânica </string>
 
 </resources>
