@@ -39,9 +39,9 @@
             android:layout_width="40dp"
             android:layout_height="40dp"
             android:src="@drawable/ic_folhinhalogo"
-            android:tint="@color/white"
             android:contentDescription="@null"
-            android:layout_marginEnd="8dp"/>
+            android:layout_marginEnd="8dp"
+            app:tint="@color/white" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -56,6 +56,7 @@
     <!-- Bolco inferior: Título, subtítulo e escolhas -->
     <LinearLayout
         android:id="@+id/cardInferior"
+        android:background="@drawable/bg_blocoverdeescuro"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:orientation="vertical"
@@ -68,7 +69,75 @@
 
         <TextView
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
+            android:layout_height="wrap_content"
+            android:text="Bem-vindo de volta"
+            android:textColor="@color/white"
+            android:textSize="22sp"
+            android:layout_marginBottom="6dp"
+            android:layout_marginTop="10dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Como você quer continuar?"
+            android:textColor="@color/white"
+            android:textSize="30dp"
+            android:paddingEnd="140dp"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Escolha uma opção para acessar seu plano de transição orgânica"
+            android:textColor="@color/white"
+            android:paddingTop="6dp"
+            android:textSize="16sp"
+            android:layout_marginBottom="20dp"/>
+
+        <!-- Botão: já tenho conta (login) -->
+        <LinearLayout
+            android:id="@+id/btnLogin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_horizontal"
+            android:background="@drawable/bg_button"
+            android:paddingStart="20dp"
+            android:paddingEnd="20dp"
+            android:paddingTop="16dp"
+            android:paddingBottom="16dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:foreground="?attr/selectableItemBackground"
+            android:layout_marginBottom="12dp">
+            
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:layout_gravity="center_horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Já tenho conta"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Entrar com e-mail e senha"
+                    android:textColor="@color/white"
+                    android:alpha="0.75"
+                    android:textSize="14sp"/>
+
+
+            </LinearLayout>
+        </LinearLayout>
+
 
     </LinearLayout>
 
