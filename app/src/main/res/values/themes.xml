@@ -7,4 +7,6 @@
     </style>
 
     <style name="Theme.TCC_Raify" parent="Base.Theme.TCC_Raify" />
+
+    <style name="Theme.TCC_Raify.Splash" parent="Theme.TCC_Raify" />
 </resources>

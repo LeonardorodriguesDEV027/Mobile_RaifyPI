@@ -57,10 +57,7 @@
                 android:text="Quem está entrando hoje ?"
                 android:textColor="@color/black"
                 android:textSize="20sp"
-                android:textStyle="bold"
-
-                app:layout_constraintTop_BottomOf="@id/btnVoltar"
-                app:layout_constraintEnd_toEndOf="parent"/>
+                android:textStyle="bold" />
 
             <!-- SUBTITULO -->
             <TextView
@@ -70,10 +67,7 @@
                 android:layout_marginTop="4dp"
                 android:text="Selecione qual perfil você deseja acessar"
                 android:textColor="@color/black"
-                android:textSize="14sp"
-
-                app:layout_constraintTop_topBottomOf="@id/txtTitulo"
-                app:layout_constraintEnd_toEndOf="parent" />
+                android:textSize="14sp" />
         </LinearLayout>
 
 
@@ -193,7 +187,7 @@
 
                 <!-- TEXTO AGRONOMO -->
                 <TextView
-                    android:id="@+id/txtConteudoAgricultor"
+                    android:id="@+id/txtConteudoAgronomo"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="8dp"

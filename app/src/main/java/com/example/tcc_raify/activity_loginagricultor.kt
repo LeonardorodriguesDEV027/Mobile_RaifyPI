@@ -4,7 +4,6 @@ import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import android.util.Patterns
-import android.widget.CheckBox
 import android.widget.EditText
 import android.widget.LinearLayout
 import android.widget.TextView
@@ -15,7 +14,6 @@ import com.google.android.material.button.MaterialButton
 class activity_loginagricultor : AppCompatActivity() {
     private lateinit var edtEmail: EditText
     private lateinit var edtSenha: EditText
-    private lateinit var checkLembrar: CheckBox
     private lateinit var btnEntrar: MaterialButton
     private lateinit var txtEsqueciSenha: TextView
     private lateinit var btnVoltar: LinearLayout
@@ -29,7 +27,6 @@ class activity_loginagricultor : AppCompatActivity() {
         /// Referências dos elementos da tela
         edtEmail = findViewById(R.id.edtEmail)
         edtSenha = findViewById(R.id.edtSenha)
-        checkLembrar = findViewById(R.id.checkLembrar)
         btnEntrar = findViewById(R.id.btnEntrar)
         txtEsqueciSenha = findViewById(R.id.txtEsqueciSenha)
         btnVoltar = findViewById(R.id.btnVoltar)
@@ -43,7 +40,7 @@ class activity_loginagricultor : AppCompatActivity() {
 
         // Esqueci minha senha
         txtEsqueciSenha.setOnClickListener {
-            val intent = intent(this, EsqueciSenhaActivity::class.java)
+            val intent = Intent(this, VerificarEmail::class.java)
             startActivity(intent)
         }
 
@@ -53,16 +50,11 @@ class activity_loginagricultor : AppCompatActivity() {
             val senha = edtSenha.text.toString().trim()
 
             if (validarCampos(email, senha)) {
-                if (checkLembrar.isChecked) {
-                    salvarDados(email, senha)
-                    } else {
-                        limparDadosSalvos()
-                    }
                 // TODO: aqui entra a chamada real de autenticação (API, Firebase, etc.)
                 irParaDashboard()
-                }
             }
         }
+    }
 
     private fun validarCampos(email: String, senha: String): Boolean {
         // função para validar os "inputs" na senha e email
@@ -89,7 +81,7 @@ class activity_loginagricultor : AppCompatActivity() {
         return true
     }
     private fun irParaDashboard() {
-        val intent = intent(this, DasboardActivity::class.java)
+        val intent = Intent(this, activity_telainicial::class.java)
         intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
         startActivity(intent)
         finish()
@@ -110,7 +102,6 @@ class activity_loginagricultor : AppCompatActivity() {
         if (lembrar) {
             edtEmail.setText(prefs.getString("email", ""))
             edtSenha.setText(prefs.getString("senha", ""))
-            checkLembrar.isChecked = true
         }
     }
 }

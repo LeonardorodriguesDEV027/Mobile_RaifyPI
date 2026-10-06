@@ -48,7 +48,7 @@ class VerificarEmail : AppCompatActivity() {
                 return@setOnClickListener
             }
 
-            val intent = Intent(this, InserirCodigoActivity::class.java)
+            val intent = Intent(this, activity_codigosenha::class.java)
             intent.putExtra("EMAIL_USUARIO", email)
             startActivity(intent)
         }

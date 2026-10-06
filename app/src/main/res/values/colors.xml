@@ -2,7 +2,7 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
-    <color name="cor_fundoaplicativo">#F9FAFB</color>
+    <color name="cor_fundoaplitivo">#F9FAFB</color>
     <color name="verde_principal">#11AE6A</color>
     <color name="cor_fundoverde">#E8F2EE</color>
     <color name="verde_escuro">#0D683E</color>

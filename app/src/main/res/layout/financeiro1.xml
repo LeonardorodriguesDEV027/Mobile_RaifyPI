@@ -191,9 +191,9 @@
                         <ImageView
                             android:layout_width="32dp"
                             android:layout_height="32dp"
-                            android:background="@drawable/border_background"
+                            android:background="@drawable/bg_border_background"
                             android:padding="6dp"
-                            android:src="@drawable/border_background"
+                            android:src="@drawable/bg_border_background"
                             app:tint="#2E7D32"/>
 
                         <LinearLayout
@@ -248,9 +248,9 @@
                         <ImageView
                             android:layout_width="32dp"
                             android:layout_height="32dp"
-                            android:background="@drawable/border_background"
+                            android:background="@drawable/bg_border_background"
                             android:padding="4dp"
-                            android:src="@drawable/border_background" />
+                            android:src="@drawable/bg_border_background" />
 
                         <LinearLayout
                             android:layout_width="0dp"
@@ -304,9 +304,9 @@
                         <ImageView
                             android:layout_width="32dp"
                             android:layout_height="32dp"
-                            android:background="@drawable/border_background"
+                            android:background="@drawable/bg_border_background"
                             android:padding="4dp"
-                            android:src="@drawable/border_background" />
+                            android:src="@drawable/bg_border_background" />
 
                         <LinearLayout
                             android:layout_width="0dp"
@@ -360,9 +360,9 @@
                         <ImageView
                             android:layout_width="32dp"
                             android:layout_height="32dp"
-                            android:background="@drawable/border_background"
+                            android:background="@drawable/bg_border_background"
                             android:padding="4dp"
-                            android:src="@drawable/border_background" />
+                            android:src="@drawable/bg_border_background" />
 
                         <LinearLayout
                             android:layout_width="0dp"

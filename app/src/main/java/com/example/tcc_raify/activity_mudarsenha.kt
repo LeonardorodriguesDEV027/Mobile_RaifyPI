@@ -49,7 +49,7 @@ class activity_mudarsenha : AppCompatActivity() {
     // Validação local antes de chamar o backend
     private fun tentarRedefinirSenha() {
         val novaSenha = edtNovaSenha.text.toString()
-        val confirmarSenha = edtConfirmarSenha.toString()
+        val confirmarSenha = edtConfirmarSenha.text.toString()
 
         if (novaSenha.length < TAMANHO_MINIMO_SENHA) {
             Toast.makeText(
@@ -88,7 +88,7 @@ class activity_mudarsenha : AppCompatActivity() {
             }
             .addOnFailureListener { erro ->
                 btnRedefinir.isEnabled = true
-                Toast.makeText(this, erro.menssage ?: "Erro ao redefinir  a senha. Tente novamente.",
+                Toast.makeText(this, erro.message ?: "Erro ao redefinir  a senha. Tente novamente.",
                     Toast.LENGTH_SHORT).show()
             }
     }
