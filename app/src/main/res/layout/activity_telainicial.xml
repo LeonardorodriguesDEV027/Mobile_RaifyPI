@@ -132,10 +132,14 @@
                     android:text="Entrar com e-mail e senha"
                     android:textColor="@color/white"
                     android:alpha="0.75"
-                    android:textSize="14sp"/>
-
-
+                    android:textSize="14sp"
+                    android:layout_marginTop="2dp"/>
             </LinearLayout>
+
+            <ImageView
+                android:layout_width="34dp"
+                android:layout_height="34dp"
+                android:src=""
         </LinearLayout>
 
 
