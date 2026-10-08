@@ -97,7 +97,7 @@
         <!-- Botão: já tenho conta (login) -->
         <LinearLayout
             android:id="@+id/btnLogin"
-            android:layout_width="wrap_content"
+            android:layout_width="350dp"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             android:gravity="center_horizontal"
@@ -124,7 +124,8 @@
                     android:text="Já tenho conta"
                     android:textColor="@color/white"
                     android:textStyle="bold"
-                    android:textSize="14sp" />
+                    android:textSize="14sp"
+                    android:layout_marginStart="6dp"/>
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -133,13 +134,56 @@
                     android:textColor="@color/white"
                     android:alpha="0.75"
                     android:textSize="14sp"
-                    android:layout_marginTop="2dp"/>
+                    android:layout_marginTop="2dp"
+                    android:layout_marginStart="6dp"/>
             </LinearLayout>
 
             <ImageView
                 android:layout_width="34dp"
                 android:layout_height="34dp"
-                android:src=""
+                android:src="@drawable/ic_setadireita2"
+                android:background="@drawable/bg_circulopreto"
+                android:padding="8dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="4dp"
+                android:contentDescription="@null" />
+        </LinearLayout>
+
+        <!-- Botão: sou novo por aqui (cadastro) -->
+        <LinearLayout
+            android:id="@+id/btnCadastro"
+            android:layout_width="350dp"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_horizontal"
+            android:background="@drawable/bg_botao2"
+            android:paddingStart="20dp"
+            android:paddingEnd="20dp"
+            android:paddingTop="16dp"
+            android:paddingBottom="16dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:foreground="?attr/selectableItemBackground"
+            android:layout_marginBottom="10dp">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Sou novo por aqui"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    android:textSize="14sp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+            </LinearLayout>
         </LinearLayout>
 
 
