@@ -1,20 +1,25 @@
 package com.example.tcc_raify
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
 
 class activity_telainicial : AppCompatActivity() {
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContentView(R.layout.activity_telainicial)
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
-            val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
-            insets
+
+        // Botão "Já tenho conta" -> tela de escolha
+        findViewById<android.view.View>(R.id.btnLogin).setOnClickListener {
+            startActivity(Intent(this, activity_telaescolha::class.java))
+        }
+
+        //Botão "Sou novo por aqui" -> tela de cadastro
+        findViewById<android.view.View>(R.id.btnCadastro).setOnClickListener {
+            startActivity(Intent(this, activity_telacadastro::class.java))
         }
     }
 }

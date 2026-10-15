@@ -71,7 +71,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="+ Novo Registro"
-                    android:background="@drawable/bg_button"
+                    android:background="@drawable/bg_botao"
                     app:backgroundTint="@color/verde_principal"
                     android:textColor="@color/white" />
 
@@ -107,7 +107,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:text="Transações"
-                    android:background="@drawable/bg_button"
+                    android:background="@drawable/bg_botao"
                     app:backgroundTint="@color/verde_principal"
                     android:textColor="@color/white" />
 
@@ -191,9 +191,9 @@
                         <ImageView
                             android:layout_width="32dp"
                             android:layout_height="32dp"
-                            android:background="@drawable/bg_border_background"
+                            android:background="@drawable/bg_blocobranco_bordacinza"
                             android:padding="6dp"
-                            android:src="@drawable/bg_border_background"
+                            android:src="@drawable/bg_blocobranco_bordacinza"
                             app:tint="#2E7D32"/>
 
                         <LinearLayout
@@ -248,9 +248,9 @@
                         <ImageView
                             android:layout_width="32dp"
                             android:layout_height="32dp"
-                            android:background="@drawable/bg_border_background"
+                            android:background="@drawable/bg_blocobranco_bordacinza"
                             android:padding="4dp"
-                            android:src="@drawable/bg_border_background" />
+                            android:src="@drawable/bg_blocobranco_bordacinza" />
 
                         <LinearLayout
                             android:layout_width="0dp"
@@ -304,9 +304,9 @@
                         <ImageView
                             android:layout_width="32dp"
                             android:layout_height="32dp"
-                            android:background="@drawable/bg_border_background"
+                            android:background="@drawable/bg_blocobranco_bordacinza"
                             android:padding="4dp"
-                            android:src="@drawable/bg_border_background" />
+                            android:src="@drawable/bg_blocobranco_bordacinza" />
 
                         <LinearLayout
                             android:layout_width="0dp"
@@ -360,9 +360,9 @@
                         <ImageView
                             android:layout_width="32dp"
                             android:layout_height="32dp"
-                            android:background="@drawable/bg_border_background"
+                            android:background="@drawable/bg_blocobranco_bordacinza"
                             android:padding="4dp"
-                            android:src="@drawable/bg_border_background" />
+                            android:src="@drawable/bg_blocobranco_bordacinza" />
 
                         <LinearLayout
                             android:layout_width="0dp"

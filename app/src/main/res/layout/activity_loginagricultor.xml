@@ -186,7 +186,7 @@
                 android:textColor="@color/white"
                 android:textSize="20sp"
                 android:textStyle="bold"
-                android:background="@drawable/bg_button"
+                android:background="@drawable/bg_botao"
                 app:backgroundTint="@color/verde_principal"/>
         </LinearLayout>
     </LinearLayout>

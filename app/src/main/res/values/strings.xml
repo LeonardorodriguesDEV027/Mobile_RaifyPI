@@ -3,5 +3,16 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="welcome_bg_content_description">Foto de agricultor em plantação orgânica </string>
+    <string name="nome_aplicativo">RAIFY</string>
+
+    <!-- Tela de dashboard -->
+    <string name="bem_vindo">Bem-vindo,  </string>
+    <string name="trasicao_para_organico">Transição para orgânico</string>
+    <string name="ate_certificacao">até a certificação</string>
+    <string name="alertas_e_notificações">Alertas e notificações</string>
+    <string name="pesticida_detectado">Pesticida detectado: incompatível com certificação</string>
+    <string name="transição_solo_6meses">Transição do solo atingiu 6 meses</string>
+    <string name="documento_treinamento">Emissão do documentação de treinamento orgânico</string>
+    <string name="proximos_passos">Próximos passos</string>
 
 </resources>
