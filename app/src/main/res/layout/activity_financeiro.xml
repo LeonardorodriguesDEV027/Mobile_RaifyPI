@@ -7,14 +7,13 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context=".activity_financeiro"
-    android:background="@color/cor_fundoaplitivo">
+    android:background="@color/cor_fundoaplicativo">
 
-    <!-- ===== CABEÇALHO ===== -->
+    <!-- Barra Verde -->
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="56dp"
+        android:layout_height="60dp"
         android:background="@color/verde_principal"
-        android:elevation="4dp"
         android:gravity="center_vertical"
         android:orientation="horizontal"
         android:paddingHorizontal="8dp">
@@ -83,7 +82,7 @@
             android:contentDescription="Perfil"
             android:padding="10dp"
             android:scaleType="fitCenter"
-            android:src="@drawable/ic_pefil"
+            android:src="@drawable/ic_perfil"
             app:tint="@color/white" />
 
     </LinearLayout>
@@ -143,7 +142,7 @@
             android:layout_width="wrap_content"
             android:layout_marginTop="2dp"
             android:layout_height="48dp"
-            android:background="@drawable/bg_button"
+            android:background="@drawable/bg_botao"
             android:paddingHorizontal="20dp"
             android:text="+ Novo Registro"
             android:textAllCaps="false"
@@ -231,7 +230,7 @@
             android:layout_height="48dp"
             android:minHeight="48dp"
             android:layout_marginStart="12dp"
-            android:background="@drawable/bg_border_background"
+            android:background="@drawable/bg_blocobranco_bordacinza"
             android:clickable="true"
             android:focusable="true"
             android:gravity="center"
@@ -290,7 +289,7 @@
 
                         <!-- coloque o icone aqui -->
                         <ImageView
-                            android:src="@drawable/ic_dinheiro"
+                            android:src="@drawable/ic_financa"
                             android:id="@+id/icReceitas"
                             android:layout_width="20dp"
                             android:layout_height="20dp"
@@ -344,7 +343,7 @@
 
                         <!-- coloque o icone aqui -->
                         <ImageView
-                            android:src="@drawable/ic_setaprograssao"
+                            android:src="@drawable/ic_setaprogressao"
                             android:id="@+id/icDespesas"
                             android:layout_width="20dp"
                             android:layout_height="20dp"
@@ -407,7 +406,7 @@
 
                         <!-- coloque o icone aqui -->
                         <ImageView
-                            android:src="@drawable/ic_dinheiro"
+                            android:src="@drawable/ic_financa"
                             android:id="@+id/icSaldo"
                             android:layout_width="20dp"
                             android:layout_height="20dp"
@@ -461,7 +460,7 @@
 
                         <!-- coloque o icone aqui -->
                         <ImageView
-                            android:src="@drawable/ic_setaprograssao"
+                            android:src="@drawable/ic_setaprogressao"
                             android:id="@+id/icCrescimento"
                             android:layout_width="20dp"
                             android:layout_height="20dp"
@@ -569,7 +568,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="48dp"
                 android:minHeight="48dp"
-                android:background="@drawable/bg_border_background"
+                android:background="@drawable/bg_blocobranco_bordacinza"
                 android:clickable="true"
                 android:focusable="true"
                 android:gravity="center"
@@ -584,7 +583,7 @@
                 android:layout_height="48dp"
                 android:minHeight="48dp"
                 android:layout_marginStart="6dp"
-                android:background="@drawable/bg_border_background"
+                android:background="@drawable/bg_blocobranco_bordacinza"
                 android:clickable="true"
                 android:focusable="true"
                 android:gravity="center"
@@ -599,7 +598,7 @@
                 android:layout_height="48dp"
                 android:minHeight="48dp"
                 android:layout_marginStart="6dp"
-                android:background="@drawable/bg_border_background"
+                android:background="@drawable/bg_blocobranco_bordacinza"
                 android:clickable="true"
                 android:focusable="true"
                 android:gravity="center"

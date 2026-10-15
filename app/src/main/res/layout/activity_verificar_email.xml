@@ -154,7 +154,7 @@
                 android:layout_marginStart="12dp"
                 android:layout_marginTop="28dp"
                 android:layout_marginEnd="12dp"
-                android:background="@drawable/bg_button"
+                android:background="@drawable/bg_botao"
                 android:text="Enviar o código"
                 android:textColor="@color/white"
                 android:textSize="20sp"

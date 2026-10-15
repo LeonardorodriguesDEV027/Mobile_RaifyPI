@@ -2,19 +2,46 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
-    <color name="cor_fundoaplitivo">#F9FAFB</color>
+    <color name="cor_fundoaplicativo">#F9FAFB</color>
+
+    <!-- Verde -->
     <color name="verde_principal">#11AE6A</color>
     <color name="cor_fundoverde">#E8F2EE</color>
     <color name="verde_escuro">#0D683E</color>
     <color name="verde_escuro2">#14231A</color>
     <color name="verde_claro">#5FE365</color>
-    <color name="roxo">#7C4DFF</color>
+    <color name="verde_claro2">#E6EFE9</color>
     <color name="verde_pastuer">#80EF80</color>
-    <color name="vermelho">#FF2C2C</color>
-    <color name="amarelo">#E2B72A</color>
+    <color name="verde_claro3">#E4F8EC</color>
+
+    <!-- Roxo -->
+    <color name="roxo">#7C4DFF</color>
+    <color name="roxo2">#3D2484</color>
+
+    <!-- Cinza -->
     <color name="cinza">#c9c7c7</color>
+    <color name="cinza2">#6B7280</color>
     <color name="cinza_claro">#B3FFFFFF</color>
+    <color name="cinza_borda">#BFBFBF</color>
+    <color name="cinza_borda2">#cccccc</color>
+
+    <!-- Outras Cores -->
+    <color name="vermelho">#FF2C2C</color>
+    <color name="vermelho_claro">#26FF746C</color>
+    <color name="amarelo">#E2B72A</color>
+    <color name="laranja">#FFC53D</color>
+    <color name="amarelo_alerta">#FFF6D6</color>
+
+    <!-- == -->
     <color name="gradiente_1">#5A0A140C</color> <!-- Opacidade em %5 -->
     <color name="gradiente_2">#260A140C</color> <!-- Opacidade em %5 -->
     <color name="gradiente_3">#F5080E0A</color> <!-- Opacidade em %5 -->
+    <color name="branco_opaco1">#5fFFFFFF</color> <!-- Opacidade em - de %50 -->
+    <color name="preto_opaco1">#4d000000</color> <!-- Opacidade maior que %25 -->
+    <color name="invisivel">#00000000</color> <!-- Opacidadde 100% -->
+
+    <!-- Texto -->
+    <color name="cor_texto_principal">#FF000000</color>
+    <color name="cor_texto2">#515251</color>
+
 </resources>
