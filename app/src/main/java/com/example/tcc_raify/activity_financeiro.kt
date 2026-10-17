@@ -3,6 +3,7 @@ package com.example.tcc_raify
 import android.content.Intent
 import android.graphics.Color
 import android.os.Bundle
+import android.widget.FrameLayout
 import android.widget.ImageButton
 import android.widget.TextView
 import android.widget.Toast
@@ -15,6 +16,7 @@ import com.github.mikephil.charting.data.BarData
 import com.github.mikephil.charting.data.BarDataSet
 import com.github.mikephil.charting.data.BarEntry
 import com.github.mikephil.charting.formatter.IndexAxisValueFormatter
+import com.google.android.material.appbar.MaterialToolbar
 
 class activity_financeiro : AppCompatActivity() {
 
@@ -27,10 +29,10 @@ class activity_financeiro : AppCompatActivity() {
     private lateinit var tabAnalises: TextView
     private lateinit var btnFiltroMes: TextView
     private lateinit var btnNovoRegistro: androidx.appcompat.widget.AppCompatButton
-    private lateinit var btnMenu: ImageButton
+    private lateinit var barraMenu: MaterialToolbar
     private lateinit var btnNotificacao: ImageButton
     private lateinit var btnPerfil: ImageButton
-    private lateinit var logoHeader: android.widget.FrameLayout
+    private lateinit var logoHeader: FrameLayout
     private lateinit var tvMediaReceitas: TextView
     private lateinit var tvMediaDespesas: TextView
     private lateinit var tvMediaLucros: TextView
@@ -46,8 +48,8 @@ class activity_financeiro : AppCompatActivity() {
             insets
         }
 
-        initViews()
-        setupChart()
+        initViewsGrafico()
+        setupChartGrafico()
         setupListeners()
         loadChartData(6) // Padrão: 6 meses
     }
@@ -62,7 +64,7 @@ class activity_financeiro : AppCompatActivity() {
         tabAnalises = findViewById(R.id.tabAnalises)
         btnFiltroMes = findViewById(R.id.btnFiltroMes)
         btnNovoRegistro = findViewById(R.id.btnNovoRegistro)
-        btnMenu = findViewById(R.id.btnMenu)
+        barraMenu = findViewById(R.id.barraMenu)
         btnNotificacao = findViewById(R.id.btnnotificacao)
         btnPerfil = findViewById(R.id.btnPerfil)
         logoHeader = findViewById(R.id.logoHeader)
@@ -109,13 +111,13 @@ class activity_financeiro : AppCompatActivity() {
             loadChartData(1)
         }
 
-        tabVisaoGeral.setOnClickListener { selectTab(0) }
+        tabVisaoGeral.setOnClickListener { selectTabGrafico(0) }
         tabTransacoes.setOnClickListener {
-            selectTab(1)
+            selectTabGrafico(1)
             val intent = Intent(this, Tela_Historico::class.java)
             startActivity(intent)
         }
-        tabAnalises.setOnClickListener { selectTab(2) }
+        tabAnalises.setOnClickListener { selectTabGrafico(2) }
 
         btnFiltroMes.setOnClickListener {
             Toast.makeText(this, "Selecionar Mês/Filtro", Toast.LENGTH_SHORT).show()
@@ -125,7 +127,7 @@ class activity_financeiro : AppCompatActivity() {
             Toast.makeText(this, "Novo Registro", Toast.LENGTH_SHORT).show()
         }
 
-        btnMenu.setOnClickListener {
+        barraMenu.setNavigationOnClickListener {
             Toast.makeText(this, "Menu aberto", Toast.LENGTH_SHORT).show()
         }
         btnNotificacao.setOnClickListener {
@@ -196,7 +198,7 @@ class activity_financeiro : AppCompatActivity() {
         }
 
         val data = BarData(incomeDataSet, expenseDataSet)
-        
+
         // Configuração de barras agrupadas (Grouped Bar Chart)
         val groupSpace = 0.2f
         val barSpace = 0.05f
