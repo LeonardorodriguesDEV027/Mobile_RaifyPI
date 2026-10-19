@@ -9,6 +9,7 @@
     android:background="@color/cor_fundoaplicativo"
     android:fitsSystemWindows="true">
 
+    <!-- Orientação da tela -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -63,7 +64,7 @@
                     <!-- Notificações -->
                     <ImageButton
                         android:id="@+id/btnnotificacao"
-                        android:layout_width="30dp"
+                        android:layout_width="48dp"
                         android:layout_height="40dp"
                         android:background="?attr/selectableItemBackgroundBorderless"
                         android:contentDescription="Notificações"
@@ -88,15 +89,16 @@
                 <!-- Perfil -->
                 <ImageButton
                     android:id="@+id/btnPerfil"
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
                     android:background="?attr/selectableItemBackgroundBorderless"
                     android:contentDescription="Perfil"
-                    android:src="@drawable/ic_perfil2"
+                    android:src="@drawable/ic_perfil"
                     android:layout_marginEnd="6dp"/>
             </LinearLayout>
         </com.google.android.material.appbar.MaterialToolbar>
 
+        <!-- Dá a função de Scroll da tela -->
         <androidx.core.widget.NestedScrollView
             android:layout_width="match_parent"
             android:layout_height="0dp"
@@ -246,23 +248,23 @@
                         <com.google.android.material.card.MaterialCardView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            style="@style/Raify.AlertText"
+                            style="@style/Raify.TextoAlerta"
                             app:cardBackgroundColor="#26FF746C">
                             <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:text="@string/pesticida_detectado"
-                                style="@style/Raify.AlertText"/>
+                                style="@style/Raify.TextoAlerta"/>
                         </com.google.android.material.card.MaterialCardView>
 
                         <!-- Alerta 2: Trasição do solo atingiu 6meses -->
                         <com.google.android.material.card.MaterialCardView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            style="@style/Raify.AlertText"
+                            style="@style/Raify.TextoAlerta"
                             app:cardBackgroundColor="#E4F8EC">
                             <TextView
-                                style="@style/Raify.AlertText"
+                                style="@style/Raify.TextoAlerta"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:text="@string/transição_solo_6meses"/>
@@ -270,12 +272,12 @@
 
                         <!-- Alerta 3:  -->
                         <com.google.android.material.card.MaterialCardView
-                            style="@style/Raify.AlertText"
+                            style="@style/Raify.TextoAlerta"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             app:cardBackgroundColor="#E4F8EC">
                             <TextView
-                                style="@style/Raify.AlertText"
+                                style="@style/Raify.TextoAlerta"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:text="@string/documento_treinamento"/>
@@ -291,16 +293,549 @@
                     android:layout_marginTop="16dp"
                     android:text="@string/proximos_passos"/>
 
+                <!-- 1° Primeiro card -->
                 <com.google.android.material.card.MaterialCardView
                     android:background="@drawable/bg_card2"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"/>
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    app:cardCornerRadius="14dp">
+                    
+                    <!-- Card -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:padding="12dp">
+                        
+                        <!-- Bolinha "1" -->
+                        <TextView
+                            style="@style/Raify.NumeroCard_1"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:backgroundTint="@color/verde_escuro3"
+                            android:text="1"
+                            android:textColor="@color/white"/>
+
+                        <!-- Texto Card: Relatório -->
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="12dp"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+                            
+                            <!-- Texto Título: Relatório técnico-->
+                            <TextView
+                                style="@style/Raify.TituloDentroCard"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/relatorio_tecnico"/>
+
+                            <!-- Texto Subtítulo: Relatório Disponível para leitura -->
+                            <TextView
+                                style="@style/Raify.SubTituloDentroCard"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/relatorio_disponivel"/>
+                        </LinearLayout>
+
+                        <!-- Botão "Ver" Relatório -->
+                        <com.google.android.material.button.MaterialButton
+                            style="@style/Raify.BotaoDashboard"
+                            android:id="@+id/btnRelatorio"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/botao_ver"
+                            android:background="@drawable/bg_botao3"
+                            app:backgroundTint="@color/verde_escuro3"/>
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+                <!-- 2° Segundo Card  -->
+                <com.google.android.material.card.MaterialCardView
+                    android:background="@drawable/bg_card2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    app:cardCornerRadius="14dp">
+
+                    <!-- Card -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:padding="12dp">
+
+                        <!-- Número "2" -->
+                        <TextView
+                            style="@style/Raify.NumeroCard_1"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:text="2"
+                            android:textColor="@color/black"
+                            android:backgroundTint="@color/verde_claro4"/>
+
+                        <!-- Texto Card: Documentos  -->
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="12dp"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <!-- Texto Título: Documentos da proprieddade -->
+                            <TextView
+                                style="@style/Raify.TituloDentroCard"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/documentos_propriedade"/>
+
+                            <!-- Texto Subtítulo: Necessário para auditoria -->
+                            <TextView
+                                style="@style/Raify.SubTituloDentroCard"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/necessario_auditoria"/>
+                        </LinearLayout>
+
+                        <!-- Botão "Enviar" Relatório -->
+                        <com.google.android.material.button.MaterialButton
+                            style="@style/Raify.BotaoDashboard"
+                            android:id="@+id/btnDocumento"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/botao_enviar"
+                            android:background="@drawable/bg_botao3"
+                            app:backgroundTint="@color/verde_escuro3"/>
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+                <!-- 3° Terceiro Card  -->
+                <com.google.android.material.card.MaterialCardView
+                    android:background="@drawable/bg_card2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    app:cardCornerRadius="14dp">
+
+                    <!-- Card -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:padding="12dp">
+
+                        <!-- Número "3" -->
+                        <TextView
+                            style="@style/Raify.NumeroCard_1"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:text="3"
+                            android:textColor="@color/black"
+                            android:backgroundTint="@color/verde_claro4"/>
+
+                        <!-- Texto Card: Documentos  -->
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="12dp"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <!-- Texto Título: Documentos da proprieddade -->
+                            <TextView
+                                style="@style/Raify.TituloDentroCard"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/conteudo_compostagem"/>
+
+                            <!-- Texto Subtítulo: Necessário para auditoria -->
+                            <TextView
+                                style="@style/Raify.SubTituloDentroCard"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/couteudo_novo"/>
+                        </LinearLayout>
+
+                        <!-- Botão "Enviar" Relatório -->
+                        <com.google.android.material.button.MaterialButton
+                            style="@style/Raify.BotaoDashboard"
+                            android:id="@+id/btnConteudo"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/botao_ver"
+                            android:background="@drawable/bg_botao3"
+                            app:backgroundTint="@color/verde_escuro3"/>
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+                <!-- Acesso rápido -->
+                <TextView
+                    style="@style/Raify.SectionTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:text="@string/acesso_rápido"/>
+
+                <!-- Tabela de acesso rápido -->
+                <GridLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:columnCount="4"
+                    android:rowCount="2">
+
+                    <!-- Card Propriedade -->
+                    <LinearLayout
+                        android:id="@+id/cardPropriedade"
+                        style="@style/Raify.ShortCard">
+                        
+                        <com.google.android.material.card.MaterialCardView
+                            style="@style/Raify.ShortcutIcon">
+
+                            <ImageView
+                                style="@style/Raify.ShortcutImage"
+                                android:src="@drawable/ic_propriedade"/>
+                        </com.google.android.material.card.MaterialCardView>
+
+                        <TextView
+                            style="@style/Raify.ShortcutLabel"
+                            android:text="@string/propriedade"/>
+                    </LinearLayout>
+
+                    <!-- Card Insumos -->
+                    <LinearLayout
+                        android:id="@+id/cardInsumos"
+                        style="@style/Raify.ShortCard">
+
+                        <com.google.android.material.card.MaterialCardView
+                            style="@style/Raify.ShortcutIcon">
+
+                            <ImageView
+                                style="@style/Raify.ShortcutImage"
+                                android:src="@drawable/ic_insumos"/>
+                        </com.google.android.material.card.MaterialCardView>
+
+                        <TextView
+                           style="@style/Raify.ShortcutLabel"
+                            android:text="@string/insumos"/>
+                    </LinearLayout>
 
 
+                    <!-- Card Calendário -->
+                    <LinearLayout
+                        android:id="@+id/cardCalendario"
+                        style="@style/Raify.ShortCard">
 
+                        <com.google.android.material.card.MaterialCardView
+                            style="@style/Raify.ShortcutIcon">
+
+                            <ImageView
+                                style="@style/Raify.ShortcutImage"
+                                android:src="@drawable/ic_calendario"/>
+                        </com.google.android.material.card.MaterialCardView>
+
+                        <TextView
+                            style="@style/Raify.ShortcutLabel"
+                            android:text="@string/calendario"/>
+                    </LinearLayout>
+
+
+                    <!-- Card Solo -->
+                    <LinearLayout
+                        android:id="@+id/cardSolo"
+                        style="@style/Raify.ShortCard">
+
+                        <com.google.android.material.card.MaterialCardView
+                            style="@style/Raify.ShortcutIcon">
+
+                            <ImageView
+                                style="@style/Raify.ShortcutImage"
+                                android:src="@drawable/ic_solo"/>
+                        </com.google.android.material.card.MaterialCardView>
+
+                        <TextView
+                            style="@style/Raify.ShortcutLabel"
+                            android:text="@string/solo"/>
+                    </LinearLayout>
+
+                    <!-- Card Certificação -->
+                    <LinearLayout
+                        android:id="@+id/cardCertficacao"
+                        style="@style/Raify.ShortCard">
+
+                        <com.google.android.material.card.MaterialCardView
+                            style="@style/Raify.ShortcutIcon">
+
+                            <ImageView
+                                style="@style/Raify.ShortcutImage"
+                                android:src="@drawable/ic_certificado"/>
+                        </com.google.android.material.card.MaterialCardView>
+
+                        <TextView
+                            style="@style/Raify.ShortcutLabel"
+                            android:text="@string/certificacao"/>
+                    </LinearLayout>
+
+                    <!-- Card Financeiro -->
+                    <LinearLayout
+                        android:id="@+id/cardFinaceiro"
+                        style="@style/Raify.ShortCard">
+
+                        <com.google.android.material.card.MaterialCardView
+                            style="@style/Raify.ShortcutIcon">
+
+                            <ImageView
+                                style="@style/Raify.ShortcutImage"
+                                android:src="@drawable/ic_financa"/>
+                        </com.google.android.material.card.MaterialCardView>
+
+                        <TextView
+                            style="@style/Raify.ShortcutLabel"
+                            android:text="@string/financeiro"/>
+                    </LinearLayout>
+
+                    <!-- Card Safra -->
+                    <LinearLayout
+                        android:id="@+id/cardSafra"
+                        style="@style/Raify.ShortCard">
+
+                        <com.google.android.material.card.MaterialCardView
+                            style="@style/Raify.ShortcutIcon">
+
+                            <ImageView
+                                style="@style/Raify.ShortcutImage"
+                                android:src="@drawable/ic_safra"/>
+                        </com.google.android.material.card.MaterialCardView>
+
+                        <TextView
+                            style="@style/Raify.ShortcutLabel"
+                            android:text="@string/safra"/>
+                    </LinearLayout>
+
+                    <!-- Card Documentos -->
+                    <LinearLayout
+                        android:id="@+id/cardDocumentos"
+                        style="@style/Raify.ShortCard"
+                        android:contentDescription="no">
+
+                        <com.google.android.material.card.MaterialCardView
+                            style="@style/Raify.ShortcutIcon">
+
+                            <ImageView
+                                style="@style/Raify.ShortcutImage"
+                                android:src="@drawable/ic_documentos"/>
+                        </com.google.android.material.card.MaterialCardView>
+
+                        <TextView
+                            style="@style/Raify.ShortcutImage"
+                            android:text="@string/documentos"/>
+                    </LinearLayout>
+                </GridLayout>
+
+                <!-- Gráfico: uso de insumos (MPAndroidChart) -->
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_card2"
+                    android:layout_marginTop="16dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="16dp">
+
+                        <TextView
+                            style="@style/Raify.SectionTitle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/uso_insumos"/>
+
+                        <TextView
+                            style="@style/Raify.SubTituloDentroCard"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/kg_mes"/>
+                        
+                        <com.github.mikephil.charting.charts.BarChart
+                            android:id="@+id/barrasGráfico"
+                            android:layout_width="match_parent"
+                            android:layout_height="160dp"
+                            android:layout_marginTop="14dp"
+                            android:contentDescription="Uso de insumos químicos caiu de 120 kg em janeiro
+                            para 40 kg em junho"/>
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+                <!-- Documentos enviados -->
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    app:cardBackgroundColor="@color/white"
+                    app:cardCornerRadius="14dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="16dp">
+
+                        <!-- Título + contador -->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                style="@style/Raify.SectionTitle"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="@string/documentos_enviados" />
+
+                            <TextView
+                                android:id="@+id/tvDocumentos_contados"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="7/12"
+                                android:textColor="@color/verde_principal"
+                                android:textSize="14sp"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+
+                        <!-- Barra de progresso -->
+                        <com.google.android.material.progressindicator.LinearProgressIndicator
+                            android:id="@+id/progressoDocumentos"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="12dp"
+                            android:progress="58"
+                            app:indicatorColor="@color/verde_principal"
+                            app:trackColor="@color/verde_track"
+                            app:trackCornerRadius="4dp"
+                            app:trackThickness="8dp" />
+
+                        <!-- Substituir por RecyclerView quando a lista vier da API -->
+                        <!-- 1° Card -->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="12dp"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                style="@style/Raify.DocBadge"
+                                android:backgroundTint="@color/verde_claro3"
+                                android:text="✓"
+                                android:textColor="@color/verde_escuro3" />
+
+                            <TextView
+                                style="@style/Raify.DocName"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="@string/documentos_nome" />
+
+                            <TextView
+                                style="@style/Raify.DocStatus"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/enviado"/>
+                        </LinearLayout>
+
+                        <!-- 2° Card -->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="12dp"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                style="@style/Raify.DocBadge"
+                                android:backgroundTint="@color/verde_claro3"
+                                android:text="✓"
+                                android:textColor="@color/verde_escuro3" />
+
+                            <TextView
+                                style="@style/Raify.DocName"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="@string/documentos_nome" />
+
+                            <TextView
+                                style="@style/Raify.DocStatus"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/enviado"/>
+                        </LinearLayout>
+
+                        <!-- 3° Card -->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="12dp"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                style="@style/Raify.DocBadge"
+                                android:backgroundTint="@color/amarelo_alerta"
+                                android:text="!"
+                                android:textColor="@color/amarelo_texto"/>
+
+                            <TextView
+                                style="@style/Raify.DocName"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="@string/documentos_propriedade2"/>
+
+                            <TextView
+                                style="@style/Raify.DocStatus"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/pendente"
+                                android:textColor="@color/amarelo_texto"/>
+                        </LinearLayout>
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/btnTodosDocs"
+                            app:backgroundTint="@color/white"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="12dp"
+                            android:minHeight="44dp"
+                            android:text="@string/ver_documentos"
+                            android:textColor="@color/verde_principal"
+                            android:textStyle="bold"
+                            app:strokeColor="@color/verde_principal"
+                            app:strokeWidth="1dp"/>
+                    </LinearLayout> <!-- único fechamento do vertical -->
+                </com.google.android.material.card.MaterialCardView>
             </LinearLayout>
         </androidx.core.widget.NestedScrollView>
-
     </LinearLayout>
+
+    <!-- Menu lateral (Tela E) -->
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/nav_view"
+        android:layout_width="304dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:background="@color/white"
+        app:headerLayout="@layout/nav_header"
+        app:itemIconTint="@color/nav_item_color"
+        app:itemTextColor="@color/nav_item_color"
+        app:menu="@menu/menu_hamburguer"/>
 
 </androidx.drawerlayout.widget.DrawerLayout>

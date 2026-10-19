@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:padding="12dp">
+
+   <com.google.android.material.card.MaterialCardView
+       style="@style/Raify.Card"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:elevation="8dp">
+
+       <LinearLayout
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:orientation="vertical">
+
+           <LinearLayout
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:gravity="center_vertical"
+               android:orientation="horizontal"
+               android:paddingStart="16dp"
+               android:paddingTop="4dp"
+               android:paddingEnd="4dp"
+               android:paddingBottom="4dp">
+
+               <TextView
+                   android:id="@+id/tv_notificacaoTitulo"
+                   android:layout_width="0dp"
+                   android:layout_height="wrap_content"
+                   android:layout_weight="1"
+                   android:text="@string/notificacao"
+                   android:textStyle="bold"
+                   android:textColor="@color/cor_texto_principal"/>
+
+               <com.google.android.material.button.MaterialButton
+                   android:id="@+id/btnLerTudo"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:minHeight="44dp"
+                   android:text="@string/marcar_como_lidas"
+                   android:textAllCaps="false"
+                   android:textColor="@color/white"
+                   android:textSize="12sp"
+                   android:textStyle="bold"
+                   android:backgroundTint="@color/roxo"/>
+           </LinearLayout>
+
+           <View
+               android:layout_width="match_parent"
+               android:layout_height="1dp"
+               android:background="@color/cinza_borda2"/>
+
+           <!-- Caixa de Notificação -->
+           <androidx.constraintlayout.widget.ConstraintLayout
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content">
+
+               <!-- caixa de notificação -->
+               <androidx.recyclerview.widget.RecyclerView
+                   android:id="@+id/tv_notificacao"
+                   tools:itemCount="0"
+                   android:layout_width="0dp"
+                   android:layout_height="wrap_content"
+                   app:layout_constrainedHeight="true"
+                   app:layout_constraintBottom_toBottomOf="parent"
+                   app:layout_constraintEnd_toEndOf="parent"
+                   android:maxHeight="360dp"
+                   app:layout_constraintStart_toStartOf="parent"
+                   app:layout_constraintTop_toTopOf="parent"/>
+
+               <!-- texto: Nenhuma notificação -->
+               <TextView
+                   android:layout_width="0dp"
+                   android:layout_height="wrap_content"
+                   android:gravity="center"
+                   android:padding="28dp"
+                   android:text="@string/nenhuma_notificacao"
+                   android:textColor="@color/cor_texto2"
+                   android:textSize="14sp"
+                   app:layout_constraintEnd_toEndOf="parent"
+                   app:layout_constraintStart_toStartOf="parent"
+                   app:layout_constraintTop_toTopOf="parent"/>
+           </androidx.constraintlayout.widget.ConstraintLayout>
+       </LinearLayout>
+   </com.google.android.material.card.MaterialCardView>
+</FrameLayout>

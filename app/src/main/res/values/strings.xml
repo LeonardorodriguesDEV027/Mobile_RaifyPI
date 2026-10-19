@@ -3,7 +3,21 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="welcome_bg_content_description">Foto de agricultor em plantação orgânica </string>
+
     <string name="nome_aplicativo">RAIFY</string>
+
+
+    <!-- Popup notificações -->
+    <string name="notificacao">Notificação</string>
+    <string name="marcar_como_lidas">Marcar como lidas</string>
+    <string name="nenhuma_notificacao">Nenhuma notificação por enquanto</string>
+
+
+    <!-- Popup Perfil -->
+    <string name="perfil">Perfil</string>
+    <string name="config">Configurações</string>
+    <string name="sair">Sair</string>
+
 
     <!-- Tela de dashboard -->
     <string name="bem_vindo">Bem-vindo,  </string>
@@ -13,6 +27,52 @@
     <string name="pesticida_detectado">Pesticida detectado: incompatível com certificação</string>
     <string name="transição_solo_6meses">Transição do solo atingiu 6 meses</string>
     <string name="documento_treinamento">Emissão do documentação de treinamento orgânico</string>
+        
+        <!-- Bloco/Secção: Proximos Passos -->
     <string name="proximos_passos">Próximos passos</string>
+        <!-- 1° Card -->
+    <string name="relatorio_tecnico">Relatório técnico</string>
+    <string name="relatorio_disponivel">Relatório disponível para leitura</string>
+        <!-- 2° Card -->
+    <string name="documentos_propriedade">Documentos da proprieddade</string>
+    <string name="necessario_auditoria">Necessário para autoria</string>
+        <!-- 3° Card -->
+    <string name="conteudo_compostagem">Conteúdo sobre compostagem</string>
+    <string name="couteudo_novo">Conteúdo novo lançado</string>
 
+    <!-- Botões "Tela de Dasboard" -->
+    <string name="botao_ver">Ver</string>
+    <string name="botao_enviar">Enviar</string>
+
+
+        <!-- Bloco/Secção: Acesso Rápido  -->
+    <string name="acesso_rápido">Acesso rápido</string>
+
+        <!-- icones Acesso Rápido -->
+    <string name="propriedade">Propriedade</string>
+    <string name="insumos">Insumos</string>
+    <string name="calendario">Calendário</string>
+    <string name="solo">Solo</string>
+    <string name="certificacao">Certificação</string>
+    <string name="financeiro">Financeiro</string>
+    <string name="safra">Safra</string>
+    <string name="documentos">Documentos</string>
+        
+
+        <!-- Bloco/Secção: Uso de insumos + Gráfico -->
+    <string name="uso_insumos">Uso de insumos</string>
+    <string name="kg_mes">Insumos químicos aplicados (kg/mês)</string>
+
+        <!-- Documentos enviados -->
+    <string name="documentos_enviados">Documentos enviados</string>
+    <string name="documentos_nome">[Nome do documento enviado]</string>
+    <string name="documentos_propriedade2">Documentos da propriedade</string>
+    <string name="enviado">Enviado</string>
+    <string name="pendente">Pendente</string>
+    <string name="ver_documentos">Ver todos os documentos</string>
+
+
+    <!-- Nav Header -->
+    <string name="seuValdir">Seu Valdir</string>
+    <string name="Transição3518meses">Transição 35% · 18 meses</string>
 </resources>
