@@ -40,9 +40,9 @@
                     <ImageView
                         android:layout_width="20dp"
                         android:layout_height="20dp"
-                        android:layout_gravity="center"
                         android:src="@drawable/ic_folhinhalogo"
-                        app:tint="@color/verde_principal" />
+                        android:layout_gravity="center"
+                        app:tint="@color/verde_principal"/>
                 </FrameLayout>
 
                 <!-- Nome: "RAIFY" -->
@@ -50,11 +50,11 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="6dp"
-                    android:layout_weight="1"
                     android:text="RAIFY"
                     android:textColor="@color/white"
                     android:textSize="20dp"
-                    android:textStyle="bold" />
+                    android:textStyle="bold"
+                    android:layout_weight="1"/>
 
                 <!-- Notificações + Perfil -->
                 <FrameLayout
@@ -64,13 +64,13 @@
                     <!-- Notificações -->
                     <ImageButton
                         android:id="@+id/btnnotificacao"
-                        android:layout_width="30dp"
+                        android:layout_width="48dp"
                         android:layout_height="40dp"
-                        android:layout_marginTop="4dp"
                         android:background="?attr/selectableItemBackgroundBorderless"
                         android:contentDescription="Notificações"
                         android:src="@drawable/ic_notificacao"
-                        app:tint="@color/white" />
+                        app:tint="@color/white"
+                        android:layout_marginTop="4dp"/>
 
                     <!-- Bolinha em cima do sino -->
                     <View
@@ -83,18 +83,18 @@
                         android:background="@drawable/bg_logo2"
                         android:backgroundTint="@color/laranja"
                         android:visibility="gone"
-                        tools:visibility="visible" />
+                        tools:visibility="visible"/>
                 </FrameLayout>
 
                 <!-- Perfil -->
                 <ImageButton
                     android:id="@+id/btnPerfil"
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
-                    android:layout_marginEnd="6dp"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
                     android:background="?attr/selectableItemBackgroundBorderless"
                     android:contentDescription="Perfil"
-                    android:src="@drawable/ic_perfil" />
+                    android:src="@drawable/ic_perfil"
+                    android:layout_marginEnd="6dp"/>
             </LinearLayout>
         </com.google.android.material.appbar.MaterialToolbar>
 
@@ -859,5 +859,4 @@
         </ScrollView>
 
     </LinearLayout>
-</LinearLayout>
 </androidx.drawerlayout.widget.DrawerLayout>

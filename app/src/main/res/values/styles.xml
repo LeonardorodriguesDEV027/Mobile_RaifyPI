@@ -26,6 +26,8 @@
         <item name="android:textColor">@color/black</item>
     </style>
 
+    <style name="Raify" />
+
     <style name="Raify.Card" parent="Widget.MaterialComponents.CardView">
         <item name="cardBackgroundColor">@color/white</item>
         <item name="cardCornerRadius">16dp</item>

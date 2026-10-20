@@ -10,6 +10,7 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import com.google.android.material.appbar.MaterialToolbar
 
 class Tela_Historico : AppCompatActivity() {
 
@@ -17,16 +18,16 @@ class Tela_Historico : AppCompatActivity() {
     private lateinit var tabTransacoes: TextView
     private lateinit var tabAnalises: TextView
     private lateinit var btnFiltroMes: TextView
-    private lateinit var btnMenu: ImageButton
+    private lateinit var barraMenu: MaterialToolbar
     private lateinit var btnNotificacao: ImageButton
     private lateinit var btnPerfil: ImageButton
-    private lateinit var logoHeader: FrameLayout
+    private var logoHeader: FrameLayout? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContentView(R.layout.activity_tela_historico)
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
+        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.telahistorico) ?: findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
@@ -41,7 +42,7 @@ class Tela_Historico : AppCompatActivity() {
         tabTransacoes = findViewById(R.id.tabTransacoes)
         tabAnalises = findViewById(R.id.tabAnalises)
         btnFiltroMes = findViewById(R.id.btnFiltroMes)
-        btnMenu = findViewById(R.id.btnMenu)
+        barraMenu = findViewById(R.id.barraMenu)
         btnNotificacao = findViewById(R.id.btnnotificacao)
         btnPerfil = findViewById(R.id.btnPerfil)
         logoHeader = findViewById(R.id.logoHeader)
@@ -67,7 +68,7 @@ class Tela_Historico : AppCompatActivity() {
             Toast.makeText(this, "Selecionar Mês/Filtro", Toast.LENGTH_SHORT).show()
         }
 
-        btnMenu.setOnClickListener {
+        barraMenu.setNavigationOnClickListener {
             Toast.makeText(this, "Menu aberto", Toast.LENGTH_SHORT).show()
         }
 
@@ -79,7 +80,7 @@ class Tela_Historico : AppCompatActivity() {
             Toast.makeText(this, "Perfil", Toast.LENGTH_SHORT).show()
         }
 
-        logoHeader.setOnClickListener {
+        logoHeader?.setOnClickListener {
             Toast.makeText(this, "Raify - Início", Toast.LENGTH_SHORT).show()
         }
     }

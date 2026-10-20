@@ -17,6 +17,7 @@
 
         <!-- Barra verde | logo + RAIFY | Notificações | Perfil -->
         <LinearLayout
+            android:id="@+id/barraMenu"
             android:layout_width="match_parent"
             android:layout_height="60dp"
             android:background="@color/verde_principal"
@@ -36,29 +37,25 @@
                 android:src="@drawable/ic_menu"
                 app:tint="@color/white" />
 
-            <!-- LOGO RAIFY (Bolinha verde/branca com a folhinha) -->
+            <!-- LOGO RAIFY (Bolinha branca com a folhinha) -->
             <FrameLayout
                 android:id="@+id/logoHeader"
                 android:layout_width="36dp"
                 android:layout_height="36dp"
                 android:layout_marginStart="8dp"
+                android:background="@drawable/bg_logo2"
                 android:clickable="true"
                 android:focusable="true"
                 android:foreground="?attr/selectableItemBackgroundBorderless">
 
-                <!-- BOLINHA VERDE (atrás) -->
-                <View
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:background="@drawable/bg_logo" />
-
-                <!-- FOLHINHA BRANCA (na frente) -->
-                <ImageView
-                    android:layout_width="22dp"
-                    android:layout_height="22dp"
+                <!-- FOLHINHA VERDE (na frente) -->
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
                     android:layout_gravity="center"
                     android:contentDescription="Logo Raify"
-                    android:src="@drawable/folhinhalogo" />
+                    android:src="@drawable/ic_folhinhalogo"
+                    app:tint="@color/verde_principal" />
             </FrameLayout>
 
             <!-- Nome: "RAIFY" -->
@@ -75,7 +72,8 @@
             <!-- Notificações (Sino + Bolinha) -->
             <FrameLayout
                 android:layout_width="40dp"
-                android:layout_height="40dp">
+                android:layout_height="40dp"
+                android:layout_marginEnd="4dp">
 
                 <ImageButton
                     android:id="@+id/btnnotificacao"
@@ -83,7 +81,7 @@
                     android:layout_height="match_parent"
                     android:background="?attr/selectableItemBackgroundBorderless"
                     android:contentDescription="Notificações"
-                    android:padding="8dp"
+                    android:padding="6dp"
                     android:scaleType="fitCenter"
                     android:src="@drawable/ic_notificacao"
                     app:tint="@color/white" />
@@ -92,12 +90,12 @@
                     android:id="@+id/notificacao_bolinha"
                     android:layout_width="10dp"
                     android:layout_height="10dp"
-                    android:layout_gravity="top|end"
+                    android:layout_gravity="top|start"
                     android:layout_marginTop="6dp"
-                    android:layout_marginEnd="6dp"
+                    android:layout_marginStart="6dp"
                     android:background="@drawable/bg_logo2"
                     android:backgroundTint="@color/laranja"
-                    android:visibility="gone"
+                    android:visibility="visible"
                     tools:visibility="visible" />
             </FrameLayout>
 
@@ -106,10 +104,10 @@
                 android:id="@+id/btnPerfil"
                 android:layout_width="40dp"
                 android:layout_height="40dp"
-                android:layout_marginStart="8dp"
+                android:layout_marginStart="4dp"
                 android:background="?attr/selectableItemBackgroundBorderless"
                 android:contentDescription="Perfil"
-                android:padding="8dp"
+                android:padding="6dp"
                 android:scaleType="fitCenter"
                 android:src="@drawable/ic_perfil"
                 app:tint="@color/white" />
@@ -164,20 +162,19 @@
 
                     </LinearLayout>
 
-                    <!-- Botão à direita de "+ Novo Registro" -->
+                    <!-- Botão à direita de "+ Novo Registro" com texto interno centralizado -->
                     <androidx.appcompat.widget.AppCompatButton
                         android:id="@+id/btnNovoRegistro"
                         android:layout_width="wrap_content"
                         android:layout_height="48dp"
                         android:layout_marginTop="2dp"
                         android:background="@drawable/bg_botao"
+                        android:gravity="center"
                         android:paddingHorizontal="20dp"
                         android:text="+ Novo Registro"
                         android:textAllCaps="false"
                         android:textColor="#FFFFFF"
-                        android:textSize="18sp"
-                        tools:layout_editor_absoluteX="233dp"
-                        tools:layout_editor_absoluteY="186dp" />
+                        android:textSize="18sp" />
 
                 </LinearLayout>
 
@@ -308,15 +305,15 @@
 
                                 <!-- fundo do ícone (verde claro) -->
                                 <FrameLayout
-                                    android:layout_width="32dp"
-                                    android:layout_height="32dp"
+                                    android:layout_width="40dp"
+                                    android:layout_height="40dp"
                                     android:background="@drawable/bg_card"
                                     android:backgroundTint="#B8E8C1">
 
                                     <ImageView
                                         android:id="@+id/icReceitas"
-                                        android:layout_width="20dp"
-                                        android:layout_height="20dp"
+                                        android:layout_width="28dp"
+                                        android:layout_height="28dp"
                                         android:layout_gravity="center"
                                         android:contentDescription="Receitas"
                                         android:src="@drawable/ic_moeda" />
@@ -361,18 +358,18 @@
 
                                 <!-- fundo do ícone (vermelho claro) -->
                                 <FrameLayout
-                                    android:layout_width="32dp"
-                                    android:layout_height="32dp"
+                                    android:layout_width="40dp"
+                                    android:layout_height="40dp"
                                     android:background="@drawable/bg_card"
                                     android:backgroundTint="#FFB8B8">
 
                                     <ImageView
                                         android:id="@+id/icDespesas"
-                                        android:layout_width="20dp"
-                                        android:layout_height="20dp"
+                                        android:layout_width="28dp"
+                                        android:layout_height="28dp"
                                         android:layout_gravity="center"
                                         android:contentDescription="Despesas"
-                                        android:src="@drawable/ic_setaprogressao" />
+                                        android:src="@drawable/ic_despesa" />
                                 </FrameLayout>
 
                                 <TextView
@@ -423,18 +420,18 @@
 
                                 <!-- fundo do ícone (verde claro) -->
                                 <FrameLayout
-                                    android:layout_width="32dp"
-                                    android:layout_height="32dp"
+                                    android:layout_width="40dp"
+                                    android:layout_height="40dp"
                                     android:background="@drawable/bg_card"
                                     android:backgroundTint="#B8E8C1">
 
                                     <ImageView
                                         android:id="@+id/icSaldo"
-                                        android:layout_width="20dp"
-                                        android:layout_height="20dp"
+                                        android:layout_width="28dp"
+                                        android:layout_height="28dp"
                                         android:layout_gravity="center"
                                         android:contentDescription="Saldo"
-                                        android:src="@drawable/ic_moeda" />
+                                        android:src="@drawable/ic_cofrinho" />
                                 </FrameLayout>
 
                                 <TextView
@@ -476,15 +473,15 @@
 
                                 <!-- fundo do ícone (roxo claro) -->
                                 <FrameLayout
-                                    android:layout_width="32dp"
-                                    android:layout_height="32dp"
+                                    android:layout_width="40dp"
+                                    android:layout_height="40dp"
                                     android:background="@drawable/bg_card"
                                     android:backgroundTint="#E6DDFB">
 
                                     <ImageView
                                         android:id="@+id/icCrescimento"
-                                        android:layout_width="20dp"
-                                        android:layout_height="20dp"
+                                        android:layout_width="28dp"
+                                        android:layout_height="28dp"
                                         android:layout_gravity="center"
                                         android:contentDescription="Crescimento"
                                         android:src="@drawable/ic_setaprogressao" />

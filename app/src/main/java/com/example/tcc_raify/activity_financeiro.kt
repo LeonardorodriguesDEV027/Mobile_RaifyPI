@@ -29,7 +29,7 @@ class activity_financeiro : AppCompatActivity() {
     private lateinit var tabAnalises: TextView
     private lateinit var btnFiltroMes: TextView
     private lateinit var btnNovoRegistro: androidx.appcompat.widget.AppCompatButton
-    private lateinit var barraMenu: MaterialToolbar
+    private lateinit var btnMenu: ImageButton
     private lateinit var btnNotificacao: ImageButton
     private lateinit var btnPerfil: ImageButton
     private lateinit var logoHeader: FrameLayout
@@ -64,7 +64,7 @@ class activity_financeiro : AppCompatActivity() {
         tabAnalises = findViewById(R.id.tabAnalises)
         btnFiltroMes = findViewById(R.id.btnFiltroMes)
         btnNovoRegistro = findViewById(R.id.btnNovoRegistro)
-        barraMenu = findViewById(R.id.barraMenu)
+        btnMenu = findViewById(R.id.btnMenu)
         btnNotificacao = findViewById(R.id.btnnotificacao)
         btnPerfil = findViewById(R.id.btnPerfil)
         logoHeader = findViewById(R.id.logoHeader)
@@ -127,7 +127,7 @@ class activity_financeiro : AppCompatActivity() {
             Toast.makeText(this, "Novo Registro", Toast.LENGTH_SHORT).show()
         }
 
-        barraMenu.setNavigationOnClickListener {
+        btnMenu.setOnClickListener {
             Toast.makeText(this, "Menu aberto", Toast.LENGTH_SHORT).show()
         }
         btnNotificacao.setOnClickListener {

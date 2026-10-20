@@ -20,7 +20,7 @@ import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
-import com.raify.app.R // ajuste
+import com.example.tcc_raify.R
 
 class Notificacaopopups {
 }
@@ -35,6 +35,4 @@ data class AppNotification(
 ) {
     enum class Type { WARNING, SUCCESS, INFO }
 }
-
-private val
 
