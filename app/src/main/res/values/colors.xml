@@ -9,10 +9,12 @@
     <color name="cor_fundoverde">#E8F2EE</color>
     <color name="verde_escuro">#0D683E</color>
     <color name="verde_escuro2">#14231A</color>
+    <color name="verde_escuro3">#0A7F4B</color>
     <color name="verde_claro">#5FE365</color>
-    <color name="verde_claro2">#E6EFE9</color>
-    <color name="verde_pastuer">#80EF80</color>
+    <color name="verde_track">#E6EFE9</color>
     <color name="verde_claro3">#E4F8EC</color>
+    <color name="verde_claro4">#D9E3DD</color>
+    <color name="verde_pastuer">#80EF80</color>
 
     <!-- Roxo -->
     <color name="roxo">#7C4DFF</color>
@@ -27,10 +29,12 @@
 
     <!-- Outras Cores -->
     <color name="vermelho">#FF2C2C</color>
+    <color name="vermelho2">#B3261E</color>
     <color name="vermelho_claro">#26FF746C</color>
     <color name="amarelo">#E2B72A</color>
     <color name="laranja">#FFC53D</color>
     <color name="amarelo_alerta">#FFF6D6</color>
+    <color name="amarelo_texto">#4A3600</color>
 
     <!-- == -->
     <color name="gradiente_1">#5A0A140C</color> <!-- Opacidade em %5 -->
