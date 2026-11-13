@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <!-- FUNDO -->
+    <LinearLayout
+        android:id="@+id/fundoCodigo"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        android:paddingStart="24dp"
+        android:paddingEnd="24dp"
+        android:paddingTop="36dp"
+        android:background="@drawable/bg_fundo"
+
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <!--BOTÃO DE VOLTAR -->
+        <LinearLayout
+            android:id="@+id/btnVoltar"
+            android:layout_width="120dp"
+            android:layout_height="50dp"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:background="@drawable/bg_voltar">
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/ic_setaesquerda"
+                android:contentDescription="@null"
+                app:tint="@color/verde_principal"
+                android:layout_marginEnd="5dp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="-4dp"
+                android:layout_marginEnd="6dp"
+                android:text="Voltar"
+                android:textColor="@color/verde_principal"
+                android:textSize="22sp"
+                android:textStyle="bold"/>
+        </LinearLayout>
+
+        <!-- ESPAÇO -->
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="60dp"/>
+        <!-- CARD -->
+        <LinearLayout
+            android:id="@+id/cardCodigo"
+            android:layout_width="match_parent"
+            android:layout_height="520dp"
+            android:background="@drawable/bg_card"
+            android:elevation="2dp"
+            android:layout_gravity="center_vertical"
+            android:orientation="vertical">
+
+            <!-- LOGO -->
+            <FrameLayout
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginTop="20dp"
+                android:layout_gravity="center_horizontal">
+
+                <!-- BOlINHA VERDE (atrás) -->
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/bg_logo"/>
+
+                <!-- FOLINHA (na frente) -->
+                <ImageView
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/folhinhalogo"
+                    android:contentDescription="Logo Raify"/>
+            </FrameLayout>
+
+            <!-- TÍTULO -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="8dp"
+                android:text="RAIFY"
+                android:textSize="30dp"
+                android:textStyle="bold"
+                android:textColor="@color/black"/>
+
+            <!-- SUBTÍTULO -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="2dp"
+                android:text="Sistema de Apoio à Transsição Orgânica"
+                android:textSize="18sp"
+                android:textColor="@color/black"/>
+
+            <!-- INSTRUÇÃO -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:gravity="center"
+                android:layout_gravity="center_horizontal"
+                android:text="Insira o código de 6 dígitos\nenviado para o seu email"
+                android:textSize="16sp"
+                android:textColor="@color/black"
+                android:textStyle="bold"/>
+
+            <!-- "Código" -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="22dp"
+                android:layout_marginStart="20dp"
+                android:text="Código"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:textStyle="bold"/>
+
+            <!-- Linha com os 6 campos de código -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal"
+                android:weightSum="6">
+
+                <!-- Campo 1 -->
+                <EditText
+                    android:id="@+id/digito1"
+                    style="@style/CampoCodigo"
+                    android:layout_marginStart="16dp"/>
+
+                <!-- Campo 2 -->
+                <EditText
+                    android:id="@+id/digito2"
+                    style="@style/CampoCodigo"/>
+
+                <!-- Campo 2 -->
+                <EditText
+                    android:id="@+id/digito3"
+                    style="@style/CampoCodigo"/>
+
+                <!-- Campo 2 -->
+                <EditText
+                    android:id="@+id/digito4"
+                    style="@style/CampoCodigo"/>
+
+                <!-- Campo 2 -->
+                <EditText
+                    android:id="@+id/digito5"
+                    style="@style/CampoCodigo"/>
+
+                <!-- Campo 2 -->
+                <EditText
+                    android:id="@+id/digito6"
+                    style="@style/CampoCodigo"
+                    android:layout_marginEnd="16dp"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:orientation="horizontal"
+                android:layout_gravity="center_horizontal">
+
+                <TextView
+                    android:id="@+id/naoAC"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Não achou o código?"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    android:labelFor="@id/txtReenviar"/>
+
+                <TextView
+                    android:id="@+id/txtReenviar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Reenviar o código"
+                    android:textSize="16sp"
+                    android:textColor="@color/verde_principal"
+                    android:textStyle="bold"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:background="?attr/selectableItemBackground"
+                    android:padding="4dp"/>
+            </LinearLayout>
+
+            <!-- BOTÃO -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnConfirmar"
+                android:layout_width="match_parent"
+                android:layout_height="54dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="12dp"
+                android:layout_marginEnd="12dp"
+                android:layout_gravity="center_horizontal"
+                android:gravity="center"
+                android:text="Confirmar código"
+                android:textColor="@color/white"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                android:background="@drawable/bg_botao"
+                app:backgroundTint="@color/verde_principal"/>
+        </LinearLayout>
+    </LinearLayout>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

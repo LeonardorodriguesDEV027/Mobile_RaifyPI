@@ -1,0 +1,12 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.TCC_Raify" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="android:windowBackground">@color/verde_principal</item>
+        <!-- Customize your light theme here. -->
+        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+    </style>
+
+    <style name="Theme.TCC_Raify" parent="Base.Theme.TCC_Raify" />
+
+    <style name="Theme.TCC_Raify.Splash" parent="Theme.TCC_Raify" />
+</resources>

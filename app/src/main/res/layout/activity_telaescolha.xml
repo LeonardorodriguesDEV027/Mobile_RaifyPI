@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity_telaescolha"
+    android:background="@color/white">
+
+   <!-- FUNDO -->
+    <LinearLayout
+        android:id="@+id/fundoEscolha"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        android:paddingStart="0dp"
+        android:paddingEnd="0dp"
+        android:paddingTop="36dp"
+        android:background="@color/white"
+
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <!-- BOTÃO "Voltar" -->
+        <LinearLayout
+            android:id="@+id/btnVoltar"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="16dp"
+            android:gravity="center"
+            android:background="@drawable/bg_circuloverde">
+
+            <!-- SETA BRANCA -->
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/ic_setaesquerda"
+                android:contentDescription="@null"
+                app:tint="@color/white" />
+        </LinearLayout>
+
+        <!-- TITULO E SUBTITULO -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_gravity="center"
+            android:layout_marginBottom="16dp">
+
+            <!-- TÍTULO -->
+            <TextView
+                android:id="@+id/txtTitulo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Quem está entrando hoje ?"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <!-- SUBTITULO -->
+            <TextView
+                android:id="@+id/txtSubtitulo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="Selecione qual perfil você deseja acessar"
+                android:textColor="@color/black"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+
+        <!-- PERFILS -->
+        <LinearLayout
+            android:id="@+id/conteinerPerfis"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <!-- CARD VERDE -->
+            <LinearLayout
+                android:id="@+id/cardAgricultor"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:background="@color/verde_principal"
+                android:clickable="true"
+                android:focusable="true"
+                android:foreground="?attr/selectableItemBackground"
+                android:paddingStart="32dp"
+                android:paddingEnd="32dp">
+
+                <!-- ICONE AGRICULTOR -->
+                <FrameLayout
+                    android:id="@+id/iconeAgricultor"
+                    android:layout_marginTop="-50dp"
+                    android:layout_width="90dp"
+                    android:layout_height="90dp">
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/bg_contornobranco"/>
+
+                    <ImageView
+                        android:layout_width="54dp"
+                        android:layout_height="54dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/ic_agricultura"
+                        android:contentDescription="Ícone Agricultor"/>
+                </FrameLayout>
+
+                <!-- TEXTO AGRICULTOR -->
+                <TextView
+                    android:id="@+id/txtConteudoAgricultor"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:gravity="center"
+                    android:text="Acompanhamento do processo\n análises e suporte"
+                    android:textColor="@color/white"
+                    android:textSize="14sp"
+                    android:labelFor="@+id/btnAgricultorEntrar"/>
+
+                <!-- BOTÃO DE ENTRAR AGRICULTOR -->
+                <LinearLayout
+                    android:id="@+id/btnAgricultorEntrar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="6dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Toque para entrar"
+                        android:textColor="@color/white"
+                        android:textSize="14sp"/>
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:src="@drawable/ic_setadireita"
+                        app:tint="@color/white" />
+                </LinearLayout>
+            </LinearLayout>
+
+
+
+            <!-- CARD ROXO -->
+            <LinearLayout
+                android:id="@+id/cardAgronomo"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:background="@color/roxo"
+                android:clickable="true"
+                android:focusable="true"
+                android:foreground="?attr/selectableItemBackground">
+
+                <!-- ICONE AGRONOMO -->
+                <FrameLayout
+                    android:id="@+id/iconeAgronomo"
+                    android:layout_width="90dp"
+                    android:layout_height="90dp">
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/bg_contornobranco"/>
+
+                    <ImageView
+                        android:layout_width="54dp"
+                        android:layout_height="54dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/ic_agronomia"
+                        android:contentDescription="Ícone Agrônomo"/>
+                </FrameLayout>
+
+                <!-- TEXTO AGRONOMO -->
+                <TextView
+                    android:id="@+id/txtConteudoAgronomo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:gravity="center"
+                    android:text="Diagnóstico técnico, laudos e\nrecomendações de manejo"
+                    android:textColor="@color/white"
+                    android:textSize="14sp"/>
+
+                <!-- BOTÃO ENTRAR AGRONÔMO -->
+                <LinearLayout
+                    android:id="@+id/btnAgronomoEntrar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="6dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Toque para entrar"
+                        android:textColor="@color/white"
+                        android:textSize="14sp"/>
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:src="@drawable/ic_setadireita"
+                        app:tint="@color/white" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1055759169199",
+    "project_id": "raify-89ec5",
+    "storage_bucket": "raify-89ec5.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1055759169199:android:c681fb20cc3cd32b02065a",
+        "android_client_info": {
+          "package_name": "com.example.tcc_raify"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBUmHsxfga5kpgvdcwnGO38Idyi68pc3Jc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single">
+        <item android:id="@+id/nav_dashboard"
+            android:checked="true"
+            android:icon="@drawable/ic_home"
+            android:title="Dashboard" />
+
+        <item android:id="@+id/nav_propriedade"
+            android:icon="@drawable/ic_propriedade"
+            android:title="Propriedades" />
+
+        <item android:id="@+id/nav_insumos"
+            android:icon="@drawable/ic_insumos"
+            android:title="Insumos" />
+
+        <item android:id="@+id/nav_calendario"
+            android:icon="@drawable/ic_calendario"
+            android:title="Calendário" />
+
+        <item android:id="@+id/nav_solo"
+            android:icon="@drawable/ic_solo"
+            android:title="Solo" />
+
+        <item android:id="@+id/nav_certificacao"
+            android:icon="@drawable/ic_certificado"
+            android:title="Certificação" />
+
+        <item android:id="@+id/nav_financeiro"
+            android:icon="@drawable/ic_financa"
+            android:title="Financeiro" />
+
+        <item android:id="@+id/nav_safra"
+            android:icon="@drawable/ic_safra"
+            android:title="Safra" />
+
+        <item android:id="@+id/nav_documentos"
+            android:icon="@drawable/ic_documentos"
+            android:title="Documentos" />
+    </group>
+
+    <group android:checkableBehavior="none">
+        <item android:id="@+id/nav_ajuda"
+            android:icon="@drawable/ic_help"
+            android:title="Ajuda" />
+        </group>
+</menu>
+
