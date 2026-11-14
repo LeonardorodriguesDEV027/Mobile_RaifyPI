@@ -92,7 +92,7 @@
                 android:layout_gravity="center"
                 android:layout_marginTop="8dp"
                 android:text="RAIFY"
-                android:textSize="30dp"
+                android:textSize="30sp"
                 android:textStyle="bold"
                 android:textColor="@color/black"/>
 
@@ -141,31 +141,37 @@
                 <EditText
                     android:id="@+id/digito1"
                     style="@style/CampoCodigo"
+                    android:hint="*"
                     android:layout_marginStart="16dp"/>
 
                 <!-- Campo 2 -->
                 <EditText
                     android:id="@+id/digito2"
+                    android:hint="*"
                     style="@style/CampoCodigo"/>
 
-                <!-- Campo 2 -->
+                <!-- Campo 3 -->
                 <EditText
                     android:id="@+id/digito3"
+                    android:hint="*"
                     style="@style/CampoCodigo"/>
 
-                <!-- Campo 2 -->
+                <!-- Campo 4 -->
                 <EditText
                     android:id="@+id/digito4"
+                    android:hint="*"
                     style="@style/CampoCodigo"/>
 
-                <!-- Campo 2 -->
+                <!-- Campo 5 -->
                 <EditText
                     android:id="@+id/digito5"
+                    android:hint="*"
                     style="@style/CampoCodigo"/>
 
-                <!-- Campo 2 -->
+                <!-- Campo 6 -->
                 <EditText
                     android:id="@+id/digito6"
+                    android:hint="*"
                     style="@style/CampoCodigo"
                     android:layout_marginEnd="16dp"/>
             </LinearLayout>
@@ -190,7 +196,7 @@
                 <TextView
                     android:id="@+id/txtReenviar"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_height="48dp"
                     android:text="Reenviar o código"
                     android:textSize="16sp"
                     android:textColor="@color/verde_principal"
@@ -198,7 +204,8 @@
                     android:clickable="true"
                     android:focusable="true"
                     android:background="?attr/selectableItemBackground"
-                    android:padding="4dp"/>
+                    android:padding="4dp"
+                    android:paddingTop="18dp"/>
             </LinearLayout>
 
             <!-- BOTÃO -->

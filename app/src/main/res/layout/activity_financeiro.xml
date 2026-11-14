@@ -28,8 +28,8 @@
             <!-- Botão de menu (hambúrguer) -->
             <ImageButton
                 android:id="@+id/btnMenu"
-                android:layout_width="40dp"
-                android:layout_height="40dp"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
                 android:background="?attr/selectableItemBackgroundBorderless"
                 android:contentDescription="Abrir menu"
                 android:padding="8dp"
@@ -40,8 +40,8 @@
             <!-- LOGO RAIFY (Bolinha branca com a folhinha) -->
             <FrameLayout
                 android:id="@+id/logoHeader"
-                android:layout_width="36dp"
-                android:layout_height="36dp"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
                 android:layout_marginStart="8dp"
                 android:background="@drawable/bg_logo2"
                 android:clickable="true"
@@ -77,8 +77,8 @@
 
                 <ImageButton
                     android:id="@+id/btnnotificacao"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
                     android:background="?attr/selectableItemBackgroundBorderless"
                     android:contentDescription="Notificações"
                     android:padding="6dp"
@@ -102,8 +102,8 @@
             <!-- Botão de Perfil -->
             <ImageButton
                 android:id="@+id/btnPerfil"
-                android:layout_width="40dp"
-                android:layout_height="40dp"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
                 android:layout_marginStart="4dp"
                 android:background="?attr/selectableItemBackgroundBorderless"
                 android:contentDescription="Perfil"
