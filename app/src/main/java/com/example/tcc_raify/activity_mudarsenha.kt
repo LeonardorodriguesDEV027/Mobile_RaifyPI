@@ -8,8 +8,6 @@ import android.widget.TextView
 import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
 import com.google.android.material.button.MaterialButton
 import com.google.firebase.functions.FirebaseFunctions
 
@@ -51,7 +49,7 @@ class activity_mudarsenha : AppCompatActivity() {
     // Validação local antes de chamar o backend
     private fun tentarRedefinirSenha() {
         val novaSenha = edtNovaSenha.text.toString()
-        val confirmarSenha = edtConfirmarSenha.toString()
+        val confirmarSenha = edtConfirmarSenha.text.toString()
 
         if (novaSenha.length < TAMANHO_MINIMO_SENHA) {
             Toast.makeText(
@@ -90,12 +88,12 @@ class activity_mudarsenha : AppCompatActivity() {
             }
             .addOnFailureListener { erro ->
                 btnRedefinir.isEnabled = true
-                Toast.makeText(this, erro.menssage ?: "Erro ao redefinir  a senha. Tente novamente.",
+                Toast.makeText(this, erro.message ?: "Erro ao redefinir  a senha. Tente novamente.",
                     Toast.LENGTH_SHORT).show()
             }
     }
     private fun irParaLogin() {
-        val intent = Intent(this, MainActivity::class.java).apply {
+        val intent = Intent(this, activity_loginagricultor::class.java).apply {
             flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
         }
         startActivity(intent)

@@ -2,14 +2,14 @@
 <shape xmlns:android="http://schemas.android.com/apk/res/android"
     android:shape="rectangle">
 
-    <!-- Cor de fundo interna do container (ex: Branco) -->
+    <!-- Cor de fundo interna do container -->
     <solid android:color="@android:color/white" />
 
     <!-- Espessura e cor da borda -->
     <stroke
         android:width="3dp"
-        android:color="#BFBFBF" /> <!-- Cor verde usada no seu botão voltar -->
+        android:color="#BFBFBF" /> <!-- Cinza leve para a borda -->
 
-    <!-- Arredondamento dos cantos (opcional, ajuste como preferir) -->
+    <!-- Arredondamento dos cantos -->
     <corners android:radius="12dp" />
 </shape>

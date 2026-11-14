@@ -21,17 +21,17 @@ class RecoverCodeActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.fragment_recover_code_activity)
+        setContentView(R.layout.activity_codigosenha)
 
         btnVoltar = findViewById(R.id.btnVoltar)
         btnConfirmar = findViewById(R.id.btnConfirmar)
 
-        et1 = findViewById(R.id.et1)
-        et2 = findViewById(R.id.et2)
-        et3 = findViewById(R.id.et3)
-        et4 = findViewById(R.id.et4)
-        et5 = findViewById(R.id.et5)
-        et6 = findViewById(R.id.et6)
+        et1 = findViewById(R.id.digito1)
+        et2 = findViewById(R.id.digito2)
+        et3 = findViewById(R.id.digito3)
+        et4 = findViewById(R.id.digito4)
+        et5 = findViewById(R.id.digito5)
+        et6 = findViewById(R.id.digito6)
 
         val codeBoxes = arrayOf(et1, et2, et3, et4, et5, et6)
 

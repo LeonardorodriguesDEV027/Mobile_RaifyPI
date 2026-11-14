@@ -2,25 +2,18 @@ package com.example.tcc_raify
 
 import android.content.Context
 import android.content.Intent
-import android.content.pm.Checksum
 import android.os.Bundle
-import android.provider.ContactsContract
 import android.util.Patterns
-import android.widget.CheckBox
 import android.widget.EditText
 import android.widget.LinearLayout
 import android.widget.TextView
-import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
 import com.google.android.material.button.MaterialButton
 
 
-class MainActivity : AppCompatActivity() {
+class activity_loginagricultor : AppCompatActivity() {
     private lateinit var edtEmail: EditText
     private lateinit var edtSenha: EditText
-    private lateinit var checkLembrar: CheckBox
     private lateinit var btnEntrar: MaterialButton
     private lateinit var txtEsqueciSenha: TextView
     private lateinit var btnVoltar: LinearLayout
@@ -29,12 +22,11 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        setContentView(R.layout.activity_loginagricultor)
 
         /// Referências dos elementos da tela
         edtEmail = findViewById(R.id.edtEmail)
         edtSenha = findViewById(R.id.edtSenha)
-        checkLembrar = findViewById(R.id.checkLembrar)
         btnEntrar = findViewById(R.id.btnEntrar)
         txtEsqueciSenha = findViewById(R.id.txtEsqueciSenha)
         btnVoltar = findViewById(R.id.btnVoltar)
@@ -48,7 +40,7 @@ class MainActivity : AppCompatActivity() {
 
         // Esqueci minha senha
         txtEsqueciSenha.setOnClickListener {
-            val intent = intent(this, EsqueciSenhaActivity::class.java)
+            val intent = Intent(this, VerificarEmail::class.java)
             startActivity(intent)
         }
 
@@ -58,16 +50,11 @@ class MainActivity : AppCompatActivity() {
             val senha = edtSenha.text.toString().trim()
 
             if (validarCampos(email, senha)) {
-                if (checkLembrar.isChecked) {
-                    salvarDados(email, senha)
-                    } else {
-                        limparDadosSalvos()
-                    }
                 // TODO: aqui entra a chamada real de autenticação (API, Firebase, etc.)
                 irParaDashboard()
-                }
             }
         }
+    }
 
     private fun validarCampos(email: String, senha: String): Boolean {
         // função para validar os "inputs" na senha e email
@@ -94,7 +81,7 @@ class MainActivity : AppCompatActivity() {
         return true
     }
     private fun irParaDashboard() {
-        val intent = intent(this, DasboardActivity::class.java)
+        val intent = Intent(this, activity_telainicial::class.java)
         intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
         startActivity(intent)
         finish()
@@ -115,7 +102,6 @@ class MainActivity : AppCompatActivity() {
         if (lembrar) {
             edtEmail.setText(prefs.getString("email", ""))
             edtSenha.setText(prefs.getString("senha", ""))
-            checkLembrar.isChecked = true
         }
     }
 }

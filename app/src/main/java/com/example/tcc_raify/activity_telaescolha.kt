@@ -1,8 +1,7 @@
 package com.example.tcc_raify
 
+import android.content.Intent
 import android.os.Bundle
-import android.widget.ImageButton
-import android.widget.LinearLayout
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -14,34 +13,39 @@ class activity_telaescolha : AppCompatActivity() {
         enableEdgeToEdge()
         setContentView(R.layout.activity_telaescolha)
 
-        val cardAgronomo = findViewById<LinearLayout>(R.id.cardAgronomo)
-        val paddingBaseAgronomo = cardAgronomo.paddingBottom
+        // Referencias das views
+        val btnVoltar = findViewById<android.widget.LinearLayout>(R.id.btnVoltar)
+        val cardAgricultor = findViewById<android.widget.LinearLayout>(R.id.cardAgricultor)
+        val cardAgronomo = findViewById<android.widget.LinearLayout>(R.id.cardAgronomo)
 
-        // Topo respeita a barra de status; o card roxo vai até o fim da tela
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
-            val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, 0)
-            cardAgronomo.setPadding(
-                cardAgronomo.paddingLeft,
-                cardAgronomo.paddingTop,
-                cardAgronomo.paddingRight,
-                paddingBaseAgronomo + systemBars.bottom
-            )
-            insets
-        }
+        // Botão Voltar: retorna para a tela inicial do app
+        btnVoltar.setOnClickListener {
+            val intent = Intent(this, activity_telainicial::class.java)
 
-        findViewById<ImageButton>(R.id.btnVoltar).setOnClickListener {
+            // Limpa a pilha de telas para não empilhar a tela de escolha de novo
+            intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_ACTIVITY_SINGLE_TOP
+            startActivity(intent)
             finish()
         }
 
-        findViewById<LinearLayout>(R.id.cardAgricultor).setOnClickListener {
-            // TODO: trocar pela tela de destino do agricultor
-            // startActivity(Intent(this, activity_login::class.java).putExtra("perfil", "agricultor"))
+        // Card Verde: vai para o login Agricultor
+        cardAgricultor.setOnClickListener {
+            val intent = Intent(this, activity_loginagricultor::class.java)
+            startActivity(intent)
         }
 
+        // Card Roxo: vai para o login do Agronômo
         cardAgronomo.setOnClickListener {
-            // TODO: trocar pela tela de destino do agrônomo
-            // startActivity(Intent(this, activity_login::class.java).putExtra("perfil", "agronomo"))
+            val intent = Intent(this, activity_loginagronomo::class.java)
+            startActivity(intent)
         }
+    }
+
+    // Faz o botão físico de voltar do celular se comportar igual ao btnVoltar
+    override fun onBackPressed() {
+        val intent = Intent(this, activity_telainicial::class.java)
+        intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_ACTIVITY_SINGLE_TOP
+        startActivity(intent)
+        finish()
     }
 }
