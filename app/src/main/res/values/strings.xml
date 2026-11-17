@@ -17,6 +17,7 @@
     <string name="perfil">Perfil</string>
     <string name="config">Configurações</string>
     <string name="sair">Sair</string>
+    <string name="valdir">V</string>
 
 
     <!-- Tela de dashboard -->
@@ -71,8 +72,22 @@
     <string name="pendente">Pendente</string>
     <string name="ver_documentos">Ver todos os documentos</string>
 
+        <!-- Strings Basicas -->
+    <string name="logoraify">Logo Raify</string>
+    <string name="voltar">Voltar</string>
+    <string name="subtituloraify">Sistema de Apoio à Transição Orgânica</string>
+    <string name="email">E-mail</string>
+    <string name="senha">Senha</string>
+    <string name="exemplosenha">••••••••</string>
+    <string name="exemploemail">seu.email@exemplo.com</string>
+    <string name="esquecisenha">Esqueci minha senha</string>
+    <string name="entrar">Entrar</string>
+    <string name="novasenha">Nova Senha</string>
+    <string name="confirmarsenha">Confirmar Senha</string>
+    <string name="redefinirsenha">Redefinir senha</string>
 
-    <!-- Nav Header -->
+        <!-- Nav Header -->
     <string name="seuValdir">Seu Valdir</string>
     <string name="Transição3518meses">Transição 35% · 18 meses</string>
+    <string name="fecharm">Fechar menu</string>
 </resources>

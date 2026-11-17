@@ -44,7 +44,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="2dp"
-                android:text="Voltar"
+                android:text="@string/voltar"
                 android:textColor="#11AE6A"
                 android:textSize="22sp"
                 android:textStyle="bold" />
@@ -84,7 +84,7 @@
                     android:layout_height="60dp"
                     android:layout_gravity="center"
                     android:src="@drawable/folhinhalogo"
-                    android:contentDescription="Logo Raify"/>
+                    android:contentDescription="@string/logoraify"/>
             </FrameLayout>
 
             <!--TÍTULO-->
@@ -94,8 +94,8 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_marginTop="8dp"
-                android:text="RAIFY"
-                android:textSize="30dp"
+                android:text="@string/nome_aplicativo"
+                android:textSize="30sp"
                 android:textStyle="bold"
                 android:textColor="@color/black"/>
 
@@ -105,7 +105,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_marginTop="2dp"
-                android:text="Sistema de Apoio à Transição Orgânica"
+                android:text="@string/subtituloraify"
                 android:textSize="18sp"
                 android:textColor="@color/black"/>
 
@@ -115,7 +115,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
                 android:layout_marginStart="20dp"
-                android:text="E-mail"
+                android:text="@string/email"
                 android:textColor="@color/black"
                 android:textSize="20sp"
                 android:textStyle="bold"/>
@@ -124,11 +124,12 @@
                 android:layout_width="288dp"
                 android:layout_height="54dp"
                 android:layout_marginTop="3dp"
-                android:layout_marginLeft="20dp"
-                android:hint="seu.email@exemplo.com"
+                android:layout_marginStart="20dp"
+                android:hint="@string/exemploemail"
                 android:paddingStart="16dp"
                 android:paddingEnd="16dp"
                 android:inputType="textEmailAddress"
+                android:autofillHints="emailAddress"
                 android:background="@drawable/bg_input"/>
 
             <!-- SENHA -->
@@ -137,19 +138,21 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="26dp"
                 android:layout_marginStart="20dp"
-                android:text="Senha"
+                android:text="@string/senha"
                 android:textColor="@color/black"
                 android:textSize="20sp"
+                android:autofillHints="password"
                 android:textStyle="bold"/>
             <EditText
                 android:id="@+id/edtSenha"
                 android:layout_width="288dp"
                 android:layout_height="54dp"
                 android:layout_marginTop="3dp"
-                android:layout_marginLeft="20dp"
-                android:hint="••••••••"
+                android:layout_marginStart="20dp"
+                android:hint="@string/exemplosenha"
                 android:paddingStart="16dp"
                 android:paddingEnd="16dp"
+                android:autofillHints="password"
                 android:inputType="textPassword"
                 android:background="@drawable/bg_input"/>
 
@@ -167,7 +170,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginEnd="16dp"
-                    android:text="Esqueci minha senha"
+                    android:text="@string/esquecisenha"
                     android:textColor="@color/verde_principal"
                     android:textSize="20sp"
                     android:textStyle="bold"
@@ -182,7 +185,7 @@
                 android:layout_marginTop="18dp"
                 android:layout_marginStart="12dp"
                 android:layout_marginEnd="12dp"
-                android:text="Entrar"
+                android:text="@string/entrar"
                 android:textColor="@color/white"
                 android:textSize="20sp"
                 android:textStyle="bold"

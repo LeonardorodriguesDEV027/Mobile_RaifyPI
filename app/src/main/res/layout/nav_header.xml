@@ -66,7 +66,7 @@
             android:background="@drawable/bg_circulobranco2"
             android:backgroundTint="@color/verde_escuro"
             android:gravity="center"
-            android:text="V"
+            android:text="@string/valdir"
             android:textColor="@color/white"
             android:textStyle="bold"
             android:textSize="18sp"/>

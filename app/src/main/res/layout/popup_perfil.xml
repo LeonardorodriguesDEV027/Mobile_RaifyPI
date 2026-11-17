@@ -30,7 +30,7 @@
                     android:background="@drawable/bg_circulobranco2"
                     android:backgroundTint="@color/verde_escuro"
                     android:gravity="center"
-                    android:text="V"
+                    android:text="@string/valdir"
                     android:textColor="@color/white"
                     android:textSize="18sp"
                     android:textStyle="bold" />
