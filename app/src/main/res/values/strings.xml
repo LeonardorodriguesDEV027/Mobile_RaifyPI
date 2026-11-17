@@ -2,7 +2,16 @@
     <string name="app_name">TCC_Raify</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <!--Tela Inicial-->
     <string name="welcome_bg_content_description">Foto de agricultor em plantação orgânica </string>
+    <string name="bemvindodevolta">Bem-vindo de volta</string>
+    <string name="comocontinuar">Como você quer continuar?</string>
+    <string name="escolhaplano">Escolha uma opção para acessar seu plano de transição orgânica</string>
+    <string name="jatenhoconta">Já tenho conta</string>
+    <string name="entraremailsenha">Entrar com e-mail e senha</string>
+    <string name="sounovo">Sou novo por aqui</string>
+    <string name="criarconta">Criar uma conta gratuita</string>
+    <string name="aceitartermos">Ao continuar, você aceita os Termos e a Política de Privacidade</string>
 
     <string name="nome_aplicativo">RAIFY</string>
 
@@ -85,6 +94,16 @@
     <string name="novasenha">Nova Senha</string>
     <string name="confirmarsenha">Confirmar Senha</string>
     <string name="redefinirsenha">Redefinir senha</string>
+
+        <!--Tela Escolha -->
+    <string name="quemesta">Quem está entrando hoje ?</string>
+    <string name="selecionaperfil">Selecione qual perfil você deseja acessar</string>
+    <string name="iconeagronomo">Ícone Agrônomo</string>
+    <string name="textoagronomo">Diagnóstico técnico, laudos e\nrecomendações de manejo</string>
+    <string name="iconeagricultor">Ícone Agricultor</string>
+    <string name="textoagricultor">Acompanhamento do processo\n análises e suporte</string>
+    <string name="toque">Toque para entrar</string>
+
 
         <!-- Nav Header -->
     <string name="seuValdir">Seu Valdir</string>

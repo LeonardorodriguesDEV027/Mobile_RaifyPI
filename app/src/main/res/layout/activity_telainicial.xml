@@ -46,7 +46,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="RAIFY"
+            android:text="@string/nome_aplicativo"
             android:textColor="@color/white"
             android:textSize="40sp"
             android:textStyle="bold"
@@ -70,7 +70,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Bem-vindo de volta"
+            android:text="@string/bemvindodevolta"
             android:textColor="@color/white"
             android:textSize="22sp"
             android:layout_marginBottom="6dp"
@@ -79,16 +79,17 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Como você quer continuar?"
+            android:text="@string/comocontinuar"
             android:textColor="@color/white"
-            android:textSize="30dp"
+            android:textSize="30sp"
+            android:paddingStart="1dp"
             android:paddingEnd="140dp"
             android:textStyle="bold"/>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Escolha uma opção para acessar seu plano de transição orgânica"
+            android:text="@string/escolhaplano"
             android:textColor="@color/white"
             android:paddingTop="6dp"
             android:textSize="16sp"
@@ -112,7 +113,7 @@
             android:layout_marginBottom="12dp">
             
             <LinearLayout
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:orientation="vertical"
@@ -121,7 +122,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Já tenho conta"
+                    android:text="@string/jatenhoconta"
                     android:textColor="@color/white"
                     android:textStyle="bold"
                     android:textSize="14sp"
@@ -130,7 +131,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Entrar com e-mail e senha"
+                    android:text="@string/entraremailsenha"
                     android:textColor="@color/white"
                     android:alpha="0.60"
                     android:textSize="14sp"
@@ -175,7 +176,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Sou novo por aqui"
+                    android:text="@string/sounovo"
                     android:textColor="@color/white"
                     android:textStyle="bold"
                     android:textSize="14sp"
@@ -184,7 +185,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Criar uma conta gratuita"
+                    android:text="@string/criarconta"
                     android:textSize="14sp"
                     android:textColor="@color/white"
                     android:layout_marginTop="2dp"
@@ -208,7 +209,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:text="Ao continuar, você aceita os Termos e a Política de Privacidade"
+            android:text="@string/aceitartermos"
             android:textSize="14sp"
             android:textColor="@color/white"
             android:alpha="0.75"

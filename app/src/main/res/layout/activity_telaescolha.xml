@@ -54,7 +54,7 @@
                 android:id="@+id/txtTitulo"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Quem está entrando hoje ?"
+                android:text="@string/quemesta"
                 android:textColor="@color/black"
                 android:textSize="20sp"
                 android:textStyle="bold" />
@@ -65,7 +65,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="4dp"
-                android:text="Selecione qual perfil você deseja acessar"
+                android:text="@string/selecionaperfil"
                 android:textColor="@color/black"
                 android:textSize="14sp" />
         </LinearLayout>
@@ -112,7 +112,7 @@
                         android:layout_height="54dp"
                         android:layout_gravity="center"
                         android:src="@drawable/ic_agricultura"
-                        android:contentDescription="Ícone Agricultor"/>
+                        android:contentDescription="@string/iconeagricultor"/>
                 </FrameLayout>
 
                 <!-- TEXTO AGRICULTOR -->
@@ -122,7 +122,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="8dp"
                     android:gravity="center"
-                    android:text="Acompanhamento do processo\n análises e suporte"
+                    android:text="@string/textoagricultor"
                     android:textColor="@color/white"
                     android:textSize="14sp"
                     android:labelFor="@+id/btnAgricultorEntrar"/>
@@ -139,7 +139,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Toque para entrar"
+                        android:text="@string/toque"
                         android:textColor="@color/white"
                         android:textSize="14sp"/>
 
@@ -147,7 +147,7 @@
                         android:layout_width="20dp"
                         android:layout_height="20dp"
                         android:src="@drawable/ic_setadireita"
-                        android:tint="@color/white" />
+                        app:tint="@color/white" />
                 </LinearLayout>
             </LinearLayout>
 
@@ -182,7 +182,7 @@
                         android:layout_height="54dp"
                         android:layout_gravity="center"
                         android:src="@drawable/ic_agronomia"
-                        android:contentDescription="Ícone Agrônomo"/>
+                        android:contentDescription="@string/iconeagronomo"/>
                 </FrameLayout>
 
                 <!-- TEXTO AGRONOMO -->
@@ -192,7 +192,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="8dp"
                     android:gravity="center"
-                    android:text="Diagnóstico técnico, laudos e\nrecomendações de manejo"
+                    android:text="@string/textoagronomo"
                     android:textColor="@color/white"
                     android:textSize="14sp"/>
 
@@ -208,7 +208,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Toque para entrar"
+                        android:text="@string/toque"
                         android:textColor="@color/white"
                         android:textSize="14sp"/>
 
@@ -216,7 +216,7 @@
                         android:layout_width="20dp"
                         android:layout_height="20dp"
                         android:src="@drawable/ic_setadireita"
-                        android:tint="@color/white" />
+                        app:tint="@color/white" />
                 </LinearLayout>
 
             </LinearLayout>
