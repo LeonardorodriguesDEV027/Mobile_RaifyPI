@@ -22,7 +22,7 @@ class activity_telacadastro : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
-        setContentView(R.layout.activity_tela_cadastro)
+        setContentView(R.layout.activity_tela_cadastro_agricultor)
 
         // Referencias dos elementos da tela
         edtNomeCompletoCadastro = findViewById(R.id.edtNomeCompletoCadastro)

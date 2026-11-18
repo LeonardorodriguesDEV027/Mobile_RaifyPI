@@ -104,6 +104,16 @@
     <string name="textoagricultor">Acompanhamento do processo\n análises e suporte</string>
     <string name="toque">Toque para entrar</string>
 
+        <!--Telas Cadastro-->
+    <string name="Cadastro">Cadastro</string>
+    <string name="NomeCompleto">Nome Completo</string>
+    <string name="SeuNome">Seu Nome</string>
+    <string name="Telefone">Telefone</string>
+    <string name="ExemploTelefone"> (99) 99999-9999</string>
+    <string name="DigiteDenovo">Digite a senha novamente</string>
+    <string name="Cadastrar">Cadastrar</string>
+
+
 
         <!-- Nav Header -->
     <string name="seuValdir">Seu Valdir</string>
